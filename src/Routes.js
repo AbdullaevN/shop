@@ -6,19 +6,22 @@ import HomePage from "./Pages/HomePage";
 import SignInPage from "./Pages/SignInPage";
 import SignUpPage from "./Pages/SignUpPage";
 import NavbarComp from "./components/Navbar/NavbarComp";
+import MainContextProvider from "./contexts/MainContext";
 
 const Routes = () => {
   return (
-    <BrowserRouter>
-      <NavbarComp />
+    <MainContextProvider>
+      <BrowserRouter>
+        <NavbarComp />
 
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route exact path="/create" component={CreateCard} />
-        <Route exact path="/sign-in" component={SignInPage} />
-        <Route exact path="/sign-up" component={SignUpPage} />
-      </Switch>
-    </BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/create" component={CreateCard} />
+          <Route exact path="/sign-in" component={SignInPage} />
+          <Route exact path="/sign-up" component={SignUpPage} />
+        </Switch>
+      </BrowserRouter>
+    </MainContextProvider>
   );
 };
 
