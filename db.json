@@ -1,5 +1,20 @@
 {
-    "products":[
-        
-    ]
+  "products": [
+    {
+      "name": "",
+      "price": "",
+      "label": "",
+      "phone": "",
+      "file": "",
+      "id": 1
+    },
+    {
+      "name": "fghjk",
+      "price": "fcgvuyhijo",
+      "label": "ctvyuhijo",
+      "phone": "4567890",
+      "file": "",
+      "id": 2
+    }
+  ]
 }

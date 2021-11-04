@@ -2,6 +2,8 @@ import React, { useContext, useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
 import { mainContext } from "../../contexts/MainContext";
+import * as yup from "yup";
+import { Formik } from "formik";
 
 const CreateCard = () => {
   const [product, setProduct] = useState({
@@ -28,10 +30,29 @@ const CreateCard = () => {
     createProduct(product);
     history.push("/");
   };
-  console.log(handleChange);
+  // console.log(handleChange);
+
+  // validation yup
+  // const schema = yup.object().shape({
+  //   name: yup.string().min(2).max(30).required("Required"),
+  //   price: yup.string().min(2).max(30).required("Required"),
+  //   phone: yup.string().min(9).max(30).required("Required"),
+  //   label: yup.string().min(4).max(6).required("Required"),
+  // });
   return (
     <div>
       <div>
+        {/* <Formik
+          validationSchema={schema}
+          onSubmit={(data) => console.log(data)}
+          initialValues={{
+            name: "",
+            price: "",
+            phone: "",
+            label: "",
+          }}
+        > */}
+        {/* {({ handleSubmit, handleChange, values, touched, errors }) => ( */}
         <Form className=" container col-3">
           <Form.Group className="mb-3" controlId="formBasicText">
             <Form.Label>name product</Form.Label>
@@ -40,6 +61,9 @@ const CreateCard = () => {
               onChange={handleChange}
               type="text"
               placeholder="Enter name"
+              // isValid={!errors.name && touched.name}
+              // isInvalid={!!errors.name}
+              // value={values.name}
             />
           </Form.Group>
 
@@ -47,33 +71,46 @@ const CreateCard = () => {
             <Form.Label>Price product</Form.Label>
             <Form.Control
               name="price"
+              // onChange={handleChange1}
               onChange={handleChange}
               type="text"
               placeholder="price"
+              // isValid={!errors.price && touched.price}
+              // isInvalid={!!errors.price}
+              // value={values.price}
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>label</Form.Label>
             <Form.Control
               name="label"
+              // onChange={handleChange1}
               onChange={handleChange}
               type="label"
               placeholder="Enter label"
+              // isValid={!errors.label && touched.label}
+              // isInvalid={!!errors.label}
+              // value={values.label}
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Phone</Form.Label>
             <Form.Control
               name="phone"
+              // onChange={handleChange1}
               onChange={handleChange}
               type="number"
               placeholder="Enter phone"
+              // isValid={!errors.phone && touched.phone}
+              // isInvalid={!!errors.phone}
+              // value={values.phone}
             />
           </Form.Group>
           <Form.Group controlId="formFileSm" className="mb-3">
             <Form.Label>Small file input example</Form.Label>
             <Form.Control
               name="file"
+              // onChange={handleChange1}
               onChange={handleChange}
               type="file"
               size="sm"
@@ -84,6 +121,8 @@ const CreateCard = () => {
             Submit
           </Button>
         </Form>
+        {/* )} */}
+        {/* </Formik> */}
       </div>
       <div className="m-3">
         <Link to="/" className="">

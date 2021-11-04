@@ -1,0 +1,10 @@
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5px;
+  width: 15rem;
+}
+.card-div {
+  display: flex;
+  flex-direction: row;
+}
