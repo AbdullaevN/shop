@@ -14,8 +14,8 @@ import "./NavbarComp.css";
 
 const HomePage = () => {
   return (
-    <div className=" ">
-      <Navbar bg="light" expand="lg">
+    <div className="">
+      <Navbar className="" bg="light" expand="lg">
         <Container fluid>
           <Navbar.Brand href="#">
             <Link to="/">
