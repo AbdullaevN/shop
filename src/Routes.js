@@ -7,6 +7,7 @@ import SignInPage from "./Pages/SignInPage";
 import SignUpPage from "./Pages/SignUpPage";
 import NavbarComp from "./components/Navbar/NavbarComp";
 import MainContextProvider from "./contexts/MainContext";
+import EditPage from "./Pages/EditPage/EditPage";
 
 const Routes = () => {
   return (
@@ -17,6 +18,8 @@ const Routes = () => {
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route exact path="/create" component={CreateCard} />
+          <Route exact path="/edit" component={EditPage} />
+
           <Route exact path="/sign-in" component={SignInPage} />
           <Route exact path="/sign-up" component={SignUpPage} />
         </Switch>

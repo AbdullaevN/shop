@@ -38,6 +38,7 @@ const CreateCard = () => {
     price: yup.string().min(2).max(30).required("Required"),
     phone: yup.string().min(9).max(30).required("Required"),
     label: yup.string().min(4).max(6).required("Required"),
+    file: yup.string(),
   });
   return (
     <div>
@@ -53,6 +54,7 @@ const CreateCard = () => {
             price: "",
             phone: "",
             label: "",
+            file: "",
           }}
         >
           {({ handleSubmit, handleChange, values, touched, errors }) => (
@@ -113,6 +115,7 @@ const CreateCard = () => {
                   onChange={handleChange}
                   type="file"
                   size="sm"
+                  value={values.file}
                 />
               </Form.Group>
 
