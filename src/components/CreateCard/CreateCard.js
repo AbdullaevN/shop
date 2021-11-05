@@ -17,112 +17,111 @@ const CreateCard = () => {
   const data = useContext(mainContext);
   const { createProduct } = data;
   const history = useHistory();
-  const handleChange = (e) => {
-    e.preventDefault();
-    let obj = {
-      ...product,
-      [e.target.name]: e.target.value,
-    };
-    setProduct(obj);
-  };
+  // const handleChange = (e) => {
+  //   e.preventDefault();
+  //   let obj = {
+  //     ...product,
+  //     [e.target.name]: e.target.value,
+  //   };
+  //   setProduct(obj);
+  // };
 
-  const handleClick = (e) => {
-    createProduct(product);
-    history.push("/");
-  };
+  // const handleClick = (e) => {
+  //   createProduct(product);
+  //   history.push("/");
+  // };
   // console.log(handleChange);
 
   // validation yup
-  // const schema = yup.object().shape({
-  //   name: yup.string().min(2).max(30).required("Required"),
-  //   price: yup.string().min(2).max(30).required("Required"),
-  //   phone: yup.string().min(9).max(30).required("Required"),
-  //   label: yup.string().min(4).max(6).required("Required"),
-  // });
+  const schema = yup.object().shape({
+    name: yup.string().min(2).max(30).required("Required"),
+    price: yup.string().min(2).max(30).required("Required"),
+    phone: yup.string().min(9).max(30).required("Required"),
+    label: yup.string().min(4).max(6).required("Required"),
+  });
   return (
     <div>
       <div>
-        {/* <Formik
+        <Formik
           validationSchema={schema}
-          onSubmit={(data) => console.log(data)}
+          onSubmit={(data) => {
+            createProduct(data);
+            history.push("/");
+          }}
           initialValues={{
             name: "",
             price: "",
             phone: "",
             label: "",
           }}
-        > */}
-        {/* {({ handleSubmit, handleChange, values, touched, errors }) => ( */}
-        <Form className=" container col-3">
-          <Form.Group className="mb-3" controlId="formBasicText">
-            <Form.Label>name product</Form.Label>
-            <Form.Control
-              name="name"
-              onChange={handleChange}
-              type="text"
-              placeholder="Enter name"
-              // isValid={!errors.name && touched.name}
-              // isInvalid={!!errors.name}
-              // value={values.name}
-            />
-          </Form.Group>
+        >
+          {({ handleSubmit, handleChange, values, touched, errors }) => (
+            <Form onSubmit={handleSubmit} className=" container col-3">
+              <Form.Group className="mb-3" controlId="formBasicText">
+                <Form.Label>name product</Form.Label>
+                <Form.Control
+                  name="name"
+                  onChange={handleChange}
+                  type="text"
+                  placeholder="Enter name"
+                  isValid={!errors.name && touched.name}
+                  isInvalid={!!errors.name}
+                  value={values.name}
+                />
+              </Form.Group>
 
-          <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Label>Price product</Form.Label>
-            <Form.Control
-              name="price"
-              // onChange={handleChange1}
-              onChange={handleChange}
-              type="text"
-              placeholder="price"
-              // isValid={!errors.price && touched.price}
-              // isInvalid={!!errors.price}
-              // value={values.price}
-            />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>label</Form.Label>
-            <Form.Control
-              name="label"
-              // onChange={handleChange1}
-              onChange={handleChange}
-              type="label"
-              placeholder="Enter label"
-              // isValid={!errors.label && touched.label}
-              // isInvalid={!!errors.label}
-              // value={values.label}
-            />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Phone</Form.Label>
-            <Form.Control
-              name="phone"
-              // onChange={handleChange1}
-              onChange={handleChange}
-              type="number"
-              placeholder="Enter phone"
-              // isValid={!errors.phone && touched.phone}
-              // isInvalid={!!errors.phone}
-              // value={values.phone}
-            />
-          </Form.Group>
-          <Form.Group controlId="formFileSm" className="mb-3">
-            <Form.Label>Small file input example</Form.Label>
-            <Form.Control
-              name="file"
-              // onChange={handleChange1}
-              onChange={handleChange}
-              type="file"
-              size="sm"
-            />
-          </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Label>Price product</Form.Label>
+                <Form.Control
+                  name="price"
+                  onChange={handleChange}
+                  type="text"
+                  placeholder="price"
+                  isValid={!errors.price && touched.price}
+                  isInvalid={!!errors.price}
+                  value={values.price}
+                />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>label</Form.Label>
+                <Form.Control
+                  name="label"
+                  onChange={handleChange}
+                  type="label"
+                  placeholder="Enter label"
+                  isValid={!errors.label && touched.label}
+                  isInvalid={!!errors.label}
+                  value={values.label}
+                />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>Phone</Form.Label>
+                <Form.Control
+                  name="phone"
+                  onChange={handleChange}
+                  type="number"
+                  placeholder="Enter phone"
+                  isValid={!errors.phone && touched.phone}
+                  isInvalid={!!errors.phone}
+                  value={values.phone}
+                />
+              </Form.Group>
+              <Form.Group controlId="formFileSm" className="mb-3">
+                <Form.Label>Small file input example</Form.Label>
+                <Form.Control
+                  name="file"
+                  onChange={handleChange}
+                  type="file"
+                  size="sm"
+                />
+              </Form.Group>
 
-          <Button onClick={handleClick} variant="primary" type="submit">
-            Submit
-          </Button>
-        </Form>
-        {/* )} */}
-        {/* </Formik> */}
+              <Button variant="primary" type="submit">
+                Submit
+              </Button>
+            </Form>
+          )}
+        </Formik>
       </div>
       <div className="m-3">
         <Link to="/" className="">

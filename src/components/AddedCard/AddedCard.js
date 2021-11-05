@@ -21,10 +21,10 @@ const AddedCard = () => {
               <Card.Title>Card Title</Card.Title>
             </Card.Body>
             <ListGroup className="list-group-flush">
-              <ListGroupItem>{item.name}</ListGroupItem>
-              <ListGroupItem>{item.price}</ListGroupItem>
-              <ListGroupItem>{item.phone}</ListGroupItem>
-              <ListGroupItem>{item.label}</ListGroupItem>
+              <ListGroupItem className="inp">{item.name}</ListGroupItem>
+              <ListGroupItem className="inp">{item.price}</ListGroupItem>
+              <ListGroupItem className="inp">{item.phone}</ListGroupItem>
+              <ListGroupItem className="inp">{item.label}</ListGroupItem>
             </ListGroup>
             <Card.Body>
               <Card.Link href="#">Card Link</Card.Link>
