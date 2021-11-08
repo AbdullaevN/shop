@@ -1,14 +1,16 @@
 import React, { Fragment, useContext, useEffect } from "react";
 import { Card, ListGroup, ListGroupItem, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useParams, useHistory } from "react-router-dom";
 import { mainContext } from "../../contexts/MainContext";
 import Logo from "../Navbar/logo.png";
 import "./AddedCard.css";
 
 const AddedCard = () => {
-  const { getProducts, products } = useContext(mainContext);
+  const { getProducts, products, deleteProduct } = useContext(mainContext);
+  const params = useParams();
+  const history = useHistory();
   useEffect(() => {
-    getProducts();
+    getProducts(params.id);
   }, []);
 
   //
@@ -35,11 +37,14 @@ const AddedCard = () => {
                   Edit
                 </Button>
               </Link>
-              <Link to="/edit">
-                <Button className="card-btn" variant="outline-primary">
-                  Delete
-                </Button>
-              </Link>
+
+              <Button
+                onClick={() => deleteProduct(item.id)}
+                className="card-btn"
+                variant="outline-primary"
+              >
+                Delete
+              </Button>
             </Card.Body>
           </Card>
         ))}

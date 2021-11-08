@@ -5,12 +5,17 @@ import { API } from "../helpers/const";
 export const mainContext = React.createContext();
 const INIT_STATE = {
   products: null,
+  productEdit: null,
 };
 
 const reducer = (state = INIT_STATE, action) => {
   switch (action.type) {
     case "GET_PRODUCTS":
       return { ...state, products: action.payload };
+    case "GET_PRODUCTS_TO_EDIT":
+      return { ...state, productEdit: action.payload };
+    default:
+      return state;
   }
 };
 const MainContextProvider = (props) => {
@@ -35,12 +40,32 @@ const MainContextProvider = (props) => {
       console.log(e);
     }
   };
+  const deleteProduct = async (id) => {
+    try {
+      await axios.delete(`${API}/${id}`);
+      getProducts();
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  const saveEdited = async (product) => {
+    try {
+      await axios.patch(`${API}/${product.id}`, product);
+      getProducts();
+    } catch (e) {
+      console.log(e);
+    }
+  };
   return (
     <mainContext.Provider
       value={{
         getProducts: getProducts,
         createProduct,
+        deleteProduct,
+        saveEdited,
         products: state.products,
+        productEdit: state.productEdit,
       }}
     >
       {props.children}
