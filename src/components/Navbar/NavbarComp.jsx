@@ -29,19 +29,27 @@ const HomePage = () => {
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
-              <Nav.Link href="#action1">Home</Nav.Link>
-              <Nav.Link href="#action2">Link</Nav.Link>
+              <Nav.Link className="for-font" href="#action1">
+                Home
+              </Nav.Link>
+              <Nav.Link className="for-font" href="#action2">
+                Link
+              </Nav.Link>
               <NavDropdown title="Link" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">
+                <NavDropdown.Item className="for-font" href="#action3">
+                  Action
+                </NavDropdown.Item>
+                <NavDropdown.Item className="for-font" href="#action4">
                   Another action
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="#action5">
+                <NavDropdown.Item className="for-font" href="#action5">
                   Something else here
                 </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href="#">Link</Nav.Link>
+              <Nav.Link className="for-font" href="#">
+                Link
+              </Nav.Link>
             </Nav>
             <Form className="d-flex ">
               <FormControl
@@ -50,16 +58,24 @@ const HomePage = () => {
                 className="me-2 justify-content-center"
                 aria-label="Search"
               />
-              <Button variant="outline-success">Search</Button>
+              <Button className="for-font" variant="outline-success">
+                Search
+              </Button>
               <Link to="/create" className="">
-                <Button variant="outline-success">Add</Button>
+                <Button className="for-font" variant="outline-success">
+                  Add
+                </Button>
               </Link>
             </Form>
             <Link to="/sign-in" className="">
-              <Button variant="outline-success">Sign In</Button>
+              <Button className="for-font" variant="outline-success">
+                Sign In
+              </Button>
             </Link>
             <Link to="/sign-up" className="">
-              <Button variant="outline-success">Sign Up</Button>
+              <Button className="for-font" variant="outline-success">
+                Sign Up
+              </Button>
             </Link>
           </Navbar.Collapse>
         </Container>
