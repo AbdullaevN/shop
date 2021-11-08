@@ -4,6 +4,8 @@ import CarouselComp from "../components/Carousel/CarouselComp";
 import { mainContext } from "../contexts/MainContext";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer/Footer";
+import SectionOne from "../components/SectionOne/SectionOne";
+import SectionTwo from "../components/SectionTwo/SectionTwo";
 
 const HomePage = () => {
   const { products, getProducts } = useContext(mainContext);
@@ -13,6 +15,8 @@ const HomePage = () => {
   return (
     <div>
       <CarouselComp />
+      <SectionOne />
+      <SectionTwo />
       {products ? (
         products.length ? (
           //

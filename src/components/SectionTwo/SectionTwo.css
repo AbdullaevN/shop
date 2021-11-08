@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@300&display=swap');
+
+.mainBlockOfPics {
+    font-family: 'Cormorant', serif;
+    letter-spacing: 1px;
+
+}
+
+.twoPics {
+    background: rgb(255, 248, 226);
+}
+
+.pic1 img {
+    width: 500px;
+    height: 460px;
+}
+
+.pic2 img{
+   width: 620px;
+   height: 460px;
+}
+
+.pic3 img{
+    width: 620px;
+   height: 460px;
+}
+
+.pic4 img{
+    width: 500px;
+    height: 460px;
+
+}
