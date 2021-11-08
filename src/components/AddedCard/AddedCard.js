@@ -32,7 +32,7 @@ const AddedCard = () => {
               <ListGroupItem className="inp">{item.label}</ListGroupItem>
             </ListGroup>
             <Card.Body>
-              <Link to="/edit">
+              <Link to={`/edit/${item.id}`}>
                 <Button className="card-btn" variant="outline-primary">
                   Edit
                 </Button>

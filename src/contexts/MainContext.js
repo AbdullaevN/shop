@@ -14,6 +14,8 @@ const reducer = (state = INIT_STATE, action) => {
       return { ...state, products: action.payload };
     case "GET_PRODUCTS_TO_EDIT":
       return { ...state, productEdit: action.payload };
+    case "CLEAR_PRODUCT_EDIT":
+      return { ...state, productEdit: null };
     default:
       return state;
   }
@@ -48,10 +50,34 @@ const MainContextProvider = (props) => {
       console.log(e);
     }
   };
+  //edit
 
-  const saveEdited = async (product) => {
+  const getProductsEdit = async (id) => {
     try {
-      await axios.patch(`${API}/${product.id}`, product);
+      const response = await axios(`${API}/${id}`);
+      let action = {
+        type: "GET_PRODUCTS_TO_EDIT",
+        payload: response.data,
+      };
+      dispatch(action);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  const clearProductEdit = () => {
+    dispatch({
+      type: "CLEAR_PRODUCT_EDIT",
+    });
+  };
+
+  const saveGetProductsEdit = async (editedProduct) => {
+    try {
+      const response = await axios.patch(
+        `${API}/${editedProduct.id}`,
+        editedProduct
+      );
+      console.log(response);
       getProducts();
     } catch (e) {
       console.log(e);
@@ -61,9 +87,11 @@ const MainContextProvider = (props) => {
     <mainContext.Provider
       value={{
         getProducts: getProducts,
+        clearProductEdit,
         createProduct,
         deleteProduct,
-        saveEdited,
+        getProductsEdit,
+        saveGetProductsEdit,
         products: state.products,
         productEdit: state.productEdit,
       }}
