@@ -15,13 +15,14 @@ const EditPage = () => {
   });
 
   const data = useContext(mainContext);
+  const { saveEdited, productEdit } = useContext(mainContext);
   const { createProduct } = data;
   const history = useHistory();
   const schema = yup.object().shape({
     name: yup.string().min(2).max(30).required("Required"),
     price: yup.string().min(2).max(30).required("Required"),
     phone: yup.string().min(9).max(30).required("Required"),
-    label: yup.string().min(4).max(6).required("Required"),
+    label: yup.string().min(4).max(15).required("Required"),
   });
   return (
     <div>

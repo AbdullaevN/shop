@@ -1,28 +1,26 @@
 {
   "products": [
     {
-      "name": "",
-      "price": "",
-      "label": "",
-      "phone": "",
+      "name": "вкеапнролт",
+      "price": "56789",
+      "phone": 345678906,
+      "label": "565789",
       "file": "",
       "id": 1
     },
     {
-      "name": "fghjk",
-      "price": "fcgvuyhijo",
-      "label": "ctvyuhijo",
-      "phone": "4567890",
-      "file": "",
+      "name": "веканпгр",
+      "price": "40000000000000000",
+      "phone": 456789000,
+      "label": "ef0gr",
       "id": 2
     },
     {
-      "name": "34567890-",
-      "price": "34567890-",
-      "phone": 45678902234234,
-      "label": "hgfgj",
+      "name": "fghujiuyt",
+      "price": "tryuio989765",
+      "phone": 345678900987,
+      "label": "gfgfyt",
       "id": 3
     }
-
   ]
 }
