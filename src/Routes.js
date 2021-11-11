@@ -9,6 +9,7 @@ import NavbarComp from "./components/Navbar/NavbarComp";
 import MainContextProvider from "./contexts/MainContext";
 import EditPage from "./Pages/EditPage/EditPage";
 import OrderPage from "./Pages/OrderPage/OrderPage";
+import CatalogPage from "./Pages/CatalogPage";
 
 const Routes = () => {
   return (
@@ -24,6 +25,7 @@ const Routes = () => {
           <Route exact path="/sign-in" component={SignInPage} />
           <Route exact path="/sign-up" component={SignUpPage} />
           <Route exact path="/order" component={OrderPage} />
+          <Route exact path="/created" component={CatalogPage} />
         </Switch>
       </BrowserRouter>
     </MainContextProvider>
