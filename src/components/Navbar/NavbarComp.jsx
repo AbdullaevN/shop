@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   Container,
   Form,
@@ -11,8 +11,21 @@ import {
 import { Link } from "react-router-dom";
 import Logo from "./logo.png";
 import "./NavbarComp.css";
+import { mainContext } from "../../contexts/MainContext";
+import { useHistory } from "react-router-dom";
 
 const HomePage = () => {
+  const { getProducts } = useContext(mainContext);
+  const history = useHistory();
+  let object = new URLSearchParams(window.location.search);
+  function filterProducts(key, value) {
+    object.set(key, value);
+    let newUrl = `${window.location.pathname}?${object.toString()}`;
+    // navigate(newUrl);
+    history.push(newUrl);
+    getProducts();
+    // console.log(newUrl);
+  }
   return (
     <div className="">
       <Navbar className="" bg="light" expand="lg">
@@ -30,7 +43,9 @@ const HomePage = () => {
               navbarScroll
             >
               <Nav.Link className="for-font" href="#action1">
-                Home
+                <Link to="/created" className="">
+                  Catalog
+                </Link>
               </Nav.Link>
               <Nav.Link className="for-font" href="#action2">
                 Link
@@ -53,6 +68,7 @@ const HomePage = () => {
             </Nav>
             <Form className="d-flex ">
               <FormControl
+                onChange={(e) => filterProducts("q", e.target.value)}
                 type="search"
                 placeholder="Search"
                 className="me-2 justify-content-center"
