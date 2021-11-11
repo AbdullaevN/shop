@@ -1,0 +1,20 @@
+/* .orderPage {
+    height: 680px;
+    background: linear-gradient(to right, #1e5799 0%,#3085f4 0%,#6086e0 11%,#2240c9 20%,#61b5f9 34%,#336aea 72%,#61b5f9 84%,#2f47e2 100%);
+} */
+
+.titleHead {
+    background: #f5f5f5;
+    padding: 0 40px;
+}
+
+.titleHead a{
+    text-decoration: none;
+    color: dimgrey;
+}
+
+.titleHead a:hover {
+    transition: 0.5s;
+    color: rgba(241, 190, 22, 0.918);
+}
+
