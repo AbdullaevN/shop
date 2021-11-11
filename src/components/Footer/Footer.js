@@ -4,6 +4,7 @@ import fb from "./icons/f-b.svg";
 import inst from "./icons/inst.svg";
 import inicon from "./icons/in.svg";
 import { Form } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -12,7 +13,7 @@ const Footer = () => {
         <div className="coMainFtr">
           <div className="bireki col-3">
             <h5>Покупателям</h5>
-            <a href="#">Доставка</a>
+            <Link to='/order'><a href="#">Доставка</a></Link>
             <a href="#">Оплата</a>
             <a href="#">Возврат товара</a>
             <a href="#">Личный кабинет</a>
@@ -28,13 +29,13 @@ const Footer = () => {
           <div className="col-3">
             <h5>Мы на связи</h5>
             <span className="number">+7 (495) 123-45-67</span>
-            <a href="#">
-              <img style={{ width: 35, height: 35 }} src={fb} />
+            <a target='blank' href="https://www.facebook.com">
+              <img style={{ width: 35, height: 35 }} src= {fb} />
             </a>
-            <a href="#">
+            <a target='blank' href="https://www.instagram.com">
               <img style={{ width: 35, height: 35 }} src={inst} />
             </a>
-            <a href="#">
+            <a target='blank' href="https://www.facebook.com">
               <img style={{ width: 35, height: 35 }} src={inicon} />
             </a>
           </div>
