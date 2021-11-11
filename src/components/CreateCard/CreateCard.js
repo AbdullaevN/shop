@@ -17,22 +17,7 @@ const CreateCard = () => {
   const data = useContext(mainContext);
   const { createProduct } = data;
   const history = useHistory();
-  // const handleChange = (e) => {
-  //   e.preventDefault();
-  //   let obj = {
-  //     ...product,
-  //     [e.target.name]: e.target.value,
-  //   };
-  //   setProduct(obj);
-  // };
 
-  // const handleClick = (e) => {
-  //   createProduct(product);
-  //   history.push("/");
-  // };
-  // console.log(handleChange);
-
-  // validation yup
   const schema = yup.object().shape({
     name: yup.string().min(2).max(30).required("Required"),
     price: yup.string().min(2).max(30).required("Required"),
