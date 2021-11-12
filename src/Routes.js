@@ -10,6 +10,8 @@ import MainContextProvider from "./contexts/MainContext";
 import EditPage from "./Pages/EditPage/EditPage";
 import OrderPage from "./Pages/OrderPage/OrderPage";
 import CatalogPage from "./Pages/CatalogPage";
+import Footer from "./components/Footer/Footer";
+import AdminPage from "./Pages/AdminPage";
 
 const Routes = () => {
   return (
@@ -19,6 +21,7 @@ const Routes = () => {
 
         <Switch>
           <Route exact path="/" component={HomePage} />
+          <Route exact path="/admin" component={AdminPage} />
           <Route exact path="/create" component={CreateCard} />
           <Route exact path="/edit/:id" component={EditPage} />
 
@@ -27,6 +30,7 @@ const Routes = () => {
           <Route exact path="/order" component={OrderPage} />
           <Route exact path="/created" component={CatalogPage} />
         </Switch>
+        <Footer />
       </BrowserRouter>
     </MainContextProvider>
   );

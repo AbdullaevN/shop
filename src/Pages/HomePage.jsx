@@ -27,8 +27,8 @@ const HomePage = () => {
         <h2>Loading...</h2>
       )}
       <SectionOne />
-      <SectionTwo id='section2' />
-      <Footer />
+      <SectionTwo id="section2" />
+      {/* <Footer /> */}
     </div>
   );
 };
