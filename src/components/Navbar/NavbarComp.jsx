@@ -48,8 +48,8 @@ const HomePage = () => {
                 </Link>
               </Nav.Link>
               <Nav.Link className="for-font" href="#action2">
-              {/* <input type="button" onClick="document.getElementById('#section2').scrollIntoView();" />Section */}
-              Section
+                {/* <input type="button" onClick="document.getElementById('#section2').scrollIntoView();" />Section */}
+                Section
               </Nav.Link>
               <NavDropdown title="Link" id="navbarScrollingDropdown">
                 <NavDropdown.Item className="for-font" href="#action3">
@@ -75,7 +75,7 @@ const HomePage = () => {
                 className="me-2 justify-content-center"
                 aria-label="Search"
               />
-             
+
               <Link to="/create" className="">
                 <Button className="for-font" variant="outline-success">
                   Add
