@@ -11,8 +11,7 @@ const CreateCard = () => {
     name: "",
     price: "",
     label: "",
-    phone: "",
-    file: "",
+
   });
 
   const data = useContext(mainContext);
@@ -22,9 +21,8 @@ const CreateCard = () => {
   const schema = yup.object().shape({
     name: yup.string().min(2).max(30).required("Required"),
     price: yup.string().min(2).max(30).required("Required"),
-    phone: yup.string().min(9).max(30).required("Required"),
-    label: yup.string().min(4).max(6).required("Required"),
-    file: yup.string(),
+    label: yup.string().min(4).max(1000).required("Required"),
+
   });
   return (
     <div>
@@ -38,9 +36,9 @@ const CreateCard = () => {
           initialValues={{
             name: "",
             price: "",
-            phone: "",
+
             label: "",
-            file: "",
+
           }}
         >
           {({ handleSubmit, handleChange, values, touched, errors }) => (
@@ -74,6 +72,7 @@ const CreateCard = () => {
                 <Form.Label>label</Form.Label>
                 <Form.Control
                   name="label"
+                  style={{ height: " " }}
                   onChange={handleChange}
                   type="label"
                   placeholder="Enter label"
@@ -82,28 +81,8 @@ const CreateCard = () => {
                   value={values.label}
                 />
               </Form.Group>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Phone</Form.Label>
-                <Form.Control
-                  name="phone"
-                  onChange={handleChange}
-                  type="number"
-                  placeholder="Enter phone"
-                  isValid={!errors.phone && touched.phone}
-                  isInvalid={!!errors.phone}
-                  value={values.phone}
-                />
-              </Form.Group>
-              <Form.Group controlId="formFileSm" className="mb-3">
-                <Form.Label>Small file input example</Form.Label>
-                <Form.Control
-                  name="file"
-                  onChange={handleChange}
-                  type="file"
-                  size="sm"
-                  value={values.file}
-                />
-              </Form.Group>
+
+
 
               <Button variant="primary" type="submit">
                 Submit
