@@ -27,8 +27,6 @@ const AddedCard = () => {
             <ListGroup className="list-group-flush">
               <ListGroupItem className="inp">{item.name}</ListGroupItem>
               <ListGroupItem className="inp">{item.price}</ListGroupItem>
-              <ListGroupItem className="inp">{item.phone}</ListGroupItem>
-              <ListGroupItem className="inp">{item.label}</ListGroupItem>
               <ListGroupItem className="inp">{item.label}</ListGroupItem>
             </ListGroup>
             <Card.Body>
