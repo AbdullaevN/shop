@@ -20,7 +20,7 @@ const SignInPage = () => {
   });
   return (
     <>
-      <div className="signup">
+      <div className="signup ">
         <Formik
           validationSchema={schema}
           onSubmit={(data) => console.log(data)}

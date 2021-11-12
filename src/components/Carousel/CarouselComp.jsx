@@ -1,15 +1,21 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
 import "./CarouselComp.css";
+import slide1  from './photos/1.jpg'
+import slide2 from './photos/2.jpg'
+import slide3 from './photos/5.jpg'
+import slide4 from './photos/6.jpg'
+import slide5 from './photos/7.jpg'
+
 
 const CarouselComp = () => {
   return (
-    <div className="container">
+    <div>
       <Carousel fade>
         <Carousel.Item>
           <img
-            className="d-block w-100"
-            src="https://live.staticflickr.com/3763/8933308248_78bfeb6990_b.jpg"
+            className="d-block w-100 h-100" 
+            src={slide5}
             alt="First slide"
           />
           <Carousel.Caption>
@@ -19,8 +25,8 @@ const CarouselComp = () => {
         </Carousel.Item>
         <Carousel.Item>
           <img
-            className="d-block w-100"
-            src="https://api.creativecommons.engineering/v1/thumbs/329beaaa-0f1d-4f19-873e-85adda21734a"
+            className="d-block w-100 h-100"
+            src={slide3}
             alt="Second slide"
           />
 
@@ -31,8 +37,8 @@ const CarouselComp = () => {
         </Carousel.Item>
         <Carousel.Item>
           <img
-            className="d-block w-100"
-            src="https://api.creativecommons.engineering/v1/thumbs/772915be-7389-4d72-a13b-c2f07ff32173"
+            className="d-block w-100 h-100"
+            src={slide4}
             alt="Third slide"
           />
 

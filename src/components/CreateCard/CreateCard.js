@@ -4,6 +4,7 @@ import { Link, useHistory } from "react-router-dom";
 import { mainContext } from "../../contexts/MainContext";
 import * as yup from "yup";
 import { Formik } from "formik";
+import './CreatedCard.css'
 
 const CreateCard = () => {
   const [product, setProduct] = useState({
@@ -43,7 +44,7 @@ const CreateCard = () => {
           }}
         >
           {({ handleSubmit, handleChange, values, touched, errors }) => (
-            <Form onSubmit={handleSubmit} className=" container col-3">
+            <Form onSubmit={handleSubmit} className=" container divka col-3">
               <Form.Group className="mb-3" controlId="formBasicText">
                 <Form.Label>name product</Form.Label>
                 <Form.Control
