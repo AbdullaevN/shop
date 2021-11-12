@@ -1,9 +1,9 @@
 import React from "react";
 import "./SectionTwo.css";
 
-const SectionTwo = () => {
+const SectionTwo = ({id}) => {
   return (
-    <div className="mainBlockOfPics">
+    <div id={id} className="mainBlockOfPics">
       <h1 style={{ marginTop: "40px", marginBottom: "80px" }}>
         Необычные и уникальные решения
       </h1>
@@ -12,7 +12,7 @@ const SectionTwo = () => {
         <div style={{ display: "flex", justifyContent: "space-around", flexWrap: 'wrap' }}>
           <div className="pic1">
             <a href="#">
-              <img style={{paddingBottom: '35px'}} src="https://cdn.pixabay.com/photo/2017/11/27/07/02/time-2980690__340.jpg"></img>
+              <img style={{paddingBottom: '35px', height: 'auto'}} src="https://assets3.insales.ru/assets/1/3687/1412711/1593593826/main_cat_1_img.jpg"></img>
               <span>Часы</span>
             </a>
           </div>
