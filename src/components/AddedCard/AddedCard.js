@@ -2,7 +2,7 @@ import React, { Fragment, useContext, useEffect } from "react";
 import { Card, ListGroup, ListGroupItem, Button } from "react-bootstrap";
 import { Link, useParams, useHistory } from "react-router-dom";
 import { mainContext } from "../../contexts/MainContext";
-import Logo from "../Navbar/logo.png";
+import Logo from "../Navbar/TAMLER.svg";
 import "./AddedCard.css";
 
 const AddedCard = () => {
