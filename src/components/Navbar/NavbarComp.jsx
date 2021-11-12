@@ -9,7 +9,7 @@ import {
   Button,
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import Logo from "./logo.png";
+import Logo from "./TAMLER.svg";
 import "./NavbarComp.css";
 import { mainContext } from "../../contexts/MainContext";
 import { useHistory } from "react-router-dom";
@@ -27,14 +27,10 @@ const HomePage = () => {
     // console.log(newUrl);
   }
   return (
-    <div className="">
+    <div className="main-nav">
       <Navbar className="fixed-top navbar " bg="light" expand="lg">
         <Container fluid>
-          <Navbar.Brand href="#">
-            <Link to="/">
-              <img src={Logo} alt="logo" className="logo"></img>
-            </Link>
-          </Navbar.Brand>
+          <Navbar.Brand href="#"></Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
@@ -66,6 +62,12 @@ const HomePage = () => {
               <Nav.Link className="for-font" href="#">
                 Link
               </Nav.Link>
+
+            <div className='logo'>
+            <Link to="/">
+                <img src={Logo} alt="logo"></img>
+              </Link>
+            </div>
             </Nav>
             <Form className="d-flex ">
               <FormControl

@@ -1,11 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100&family=Nanum+Gothic&display=swap");
 
-.logo {
-  height: 50px;
-  width: 50px;
+.main-nav {
+  position: relative;
 }
+
+
+
 .navbar{
   opacity: 0.8;
+}
+.navbar img {
+  height: 50px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 40%;
+  top: 10%;
 }
 
 .for-font {
