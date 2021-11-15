@@ -10,8 +10,8 @@ const CreateCard = () => {
   const [product, setProduct] = useState({
     name: "",
     price: "",
-    label: "",
-    phone: "",
+    details: "",
+
 
   });
 
@@ -22,8 +22,7 @@ const CreateCard = () => {
   const schema = yup.object().shape({
     name: yup.string().min(2).max(30).required("Required"),
     price: yup.string().min(2).max(30).required("Required"),
-    label: yup.string().min(4).max(1000).required("Required"),
-    phone: yup.string().min(9).max(30).required("Required"),
+    details: yup.string().min(4).max(1000).required("Required"),
 
   });
   return (
@@ -39,14 +38,14 @@ const CreateCard = () => {
             name: "",
             price: "",
 
-            label: "",
+            details: "",
 
           }}
         >
           {({ handleSubmit, handleChange, values, touched, errors }) => (
             <Form onSubmit={handleSubmit} className=" container divka col-3">
               <Form.Group className="mb-3" controlId="formBasicText">
-                <Form.Label>name product</Form.Label>
+                <Form.Label>Name</Form.Label>
                 <Form.Control
                   name="name"
                   onChange={handleChange}
@@ -57,6 +56,19 @@ const CreateCard = () => {
                   value={values.name}
                 />
               </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>Details</Form.Label>
+                <Form.Control
+                  name="details"
+                  style={{ height: " " }}
+                  onChange={handleChange}
+                  type="text"
+                  placeholder="Enter details"
+                  isValid={!errors.details && touched.details}
+                  isInvalid={!!errors.details}
+                  value={values.details}
+                />
+              </Form.Group>
 
               <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Label>Price product</Form.Label>
@@ -64,35 +76,10 @@ const CreateCard = () => {
                   name="price"
                   onChange={handleChange}
                   type="text"
-                  placeholder="price"
+                  placeholder="enter price"
                   isValid={!errors.price && touched.price}
                   isInvalid={!!errors.price}
                   value={values.price}
-                />
-              </Form.Group>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>label</Form.Label>
-                <Form.Control
-                  name="label"
-                  style={{ height: " " }}
-                  onChange={handleChange}
-                  type="label"
-                  placeholder="Enter label"
-                  isValid={!errors.label && touched.label}
-                  isInvalid={!!errors.label}
-                  value={values.label}
-                />
-              </Form.Group>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Phone</Form.Label>
-                <Form.Control
-                  name="phone"
-                  onChange={handleChange}
-                  type="number"
-                  placeholder="Enter phone"
-                  isValid={!errors.phone && touched.phone}
-                  isInvalid={!!errors.phone}
-                  value={values.phone}
                 />
               </Form.Group>
 
