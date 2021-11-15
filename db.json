@@ -16,5 +16,56 @@
       "password": "alenaaaaaaaa11",
       "id": 2
     }
+  ],
+  "products": [
+    {
+      "name": "Elsa Moon Necklace",
+      "price": "$20.14 USD",
+      "details": "Materials: Gold Plated Brass, cubic zirconia, hypoallergenic",
+      "id": 1
+    },
+    {
+      "name": "Gold Chunky Hoop Earrings",
+      "price": "$30 USD",
+      "details": "18K PVD Gold Plated Stainless Steel Base Hinged Top Closure Hoop Width: 2.9 cm Hypoallergenic Tarnish Resistant Includes soft cloth for cleaning after use Delivered in a custom Dos Nueve Studio jewelry box ",
+      "id": 2
+    },
+    {
+      "name": "Slinky Box Chain",
+      "price": "$1.525 USD",
+      "details": "14k gold diamond cut box chain. The diamond cuts on each link of this chain help to give it its organic texture and bright shine.",
+      "id": 3
+    },
+    {
+      "name": "Jael Circle Crystal Gold Ring",
+      "price": "$22.99 USD",
+      "details": "Ring Gold Tone Alloy Ring Size: 5, 6, 7, 8, 9",
+      "id": 4
+    },
+    {
+      "name": "V-Necklace - Vida",
+      "price": "$10 USD",
+      "details": " 14K Gold   Cubic Zirconia, 14K Gold on Recycled Sterling Silver  380mm - 15\", 50mm - 2\"",
+      "id": 5
+    },
+    {
+      "name": " Yuri Necklace",
+      "price": "$26.40 USD",
+      "details": "Materials: 18k gold plated sterling silver, cubic zirconia stone",
+      "id": 6
+    },
+    {
+      "name": "Mucho Twirl Midi Ring",
+      "price": "$24.00 USD",
+      "details": "Delicate ring with twisted design. Perfect for daily wear and stacking.Materials: gold plated sterling silver",
+      "id": 7
+    },
+    {
+      "name": " Francine Necklace",
+      "price": "$24.50 USD",
+      "details": "Materials: 14k gold plated sterling silver, cubic zirconia . Measurements: 15\"/380mm in length",
+      "id": 8
+    }
+
   ]
 }

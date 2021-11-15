@@ -18,8 +18,7 @@ const EditPage = () => {
   const schema = yup.object().shape({
     name: yup.string().min(2).max(30).required("Required"),
     price: yup.string().min(2).max(30).required("Required"),
-    phone: yup.string().min(9).max(30).required("Required"),
-    label: yup.string().min(4).max(15).required("Required"),
+    details: yup.string().min(4).max(1000).required("Required"),
   });
 
   const params = useParams();
@@ -48,7 +47,7 @@ const EditPage = () => {
               {({ handleSubmit, handleChange, values, touched, errors }) => (
                 <Form onSubmit={handleSubmit} className=" container col-3">
                   <Form.Group className="mb-3" controlId="formBasicText">
-                    <Form.Label>name product</Form.Label>
+                    <Form.Label>Name</Form.Label>
                     <Form.Control
                       name="name"
                       onChange={handleChange}
@@ -60,8 +59,21 @@ const EditPage = () => {
                     />
                   </Form.Group>
 
+                  <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Label>Details</Form.Label>
+                    <Form.Control
+                      name="details"
+                      onChange={handleChange}
+                      type="text"
+                      placeholder="Enter details"
+                      isValid={!errors.details && touched.details}
+                      isInvalid={!!errors.details}
+                      value={values.details}
+                    />
+                  </Form.Group>
+
                   <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Label>Price product</Form.Label>
+                    <Form.Label>Price</Form.Label>
                     <Form.Control
                       name="price"
                       onChange={handleChange}
@@ -72,39 +84,8 @@ const EditPage = () => {
                       value={values.price}
                     />
                   </Form.Group>
-                  <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>label</Form.Label>
-                    <Form.Control
-                      name="label"
-                      onChange={handleChange}
-                      type="label"
-                      placeholder="Enter label"
-                      isValid={!errors.label && touched.label}
-                      isInvalid={!!errors.label}
-                      value={values.label}
-                    />
-                  </Form.Group>
-                  <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Phone</Form.Label>
-                    <Form.Control
-                      name="phone"
-                      onChange={handleChange}
-                      type="number"
-                      placeholder="Enter phone"
-                      isValid={!errors.phone && touched.phone}
-                      isInvalid={!!errors.phone}
-                      value={values.phone}
-                    />
-                  </Form.Group>
-                  <Form.Group controlId="formFileSm" className="mb-3">
-                    <Form.Label>Small file input example</Form.Label>
-                    <Form.Control
-                      name="file"
-                      onChange={handleChange}
-                      type="file"
-                      size="sm"
-                    />
-                  </Form.Group>
+
+
 
                   <Button variant="primary" type="submit">
                     Submit
