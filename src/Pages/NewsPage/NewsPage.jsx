@@ -3,7 +3,7 @@ import "./NewsPage.css";
 
 const NewsPage = () => {
   return (
-    <div className="d-flex flex-wrap">
+    <div className="mainBlock d-flex flex-wrap">
       <div className="box col-4">
         <img
           style={{ width: "100%", height: "auto" }}
