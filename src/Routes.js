@@ -12,27 +12,30 @@ import OrderPage from "./Pages/OrderPage/OrderPage";
 import CatalogPage from "./Pages/CatalogPage";
 import Footer from "./components/Footer/Footer";
 import AdminPage from "./Pages/AdminPage";
+import AdminContextProvider from "./contexts/AdminContex";
 
 const Routes = () => {
   return (
-    <MainContextProvider>
-      <BrowserRouter>
-        <NavbarComp />
+    <AdminContextProvider>
+      <MainContextProvider>
+        <BrowserRouter>
+          <NavbarComp />
 
-        <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route exact path="/admin" component={AdminPage} />
-          <Route exact path="/create" component={CreateCard} />
-          <Route exact path="/edit/:id" component={EditPage} />
+          <Switch>
+            <Route exact path="/" component={HomePage} />
+            <Route exact path="/admin" component={AdminPage} />
+            <Route exact path="/create" component={CreateCard} />
+            <Route exact path="/edit/:id" component={EditPage} />
 
-          <Route exact path="/sign-in" component={SignInPage} />
-          <Route exact path="/sign-up" component={SignUpPage} />
-          <Route exact path="/order" component={OrderPage} />
-          <Route exact path="/created" component={CatalogPage} />
-        </Switch>
-        <Footer />
-      </BrowserRouter>
-    </MainContextProvider>
+            <Route exact path="/sign-in" component={SignInPage} />
+            <Route exact path="/sign-up" component={SignUpPage} />
+            <Route exact path="/order" component={OrderPage} />
+            <Route exact path="/created" component={CatalogPage} />
+          </Switch>
+          <Footer />
+        </BrowserRouter>
+      </MainContextProvider>
+    </AdminContextProvider>
   );
 };
 

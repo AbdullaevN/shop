@@ -4,13 +4,14 @@ import { Link, useHistory } from "react-router-dom";
 import { mainContext } from "../../contexts/MainContext";
 import * as yup from "yup";
 import { Formik } from "formik";
-import './CreatedCard.css'
+import "./CreatedCard.css";
 
 const CreateCard = () => {
   const [product, setProduct] = useState({
     name: "",
     price: "",
     label: "",
+    phone: "",
 
   });
 
@@ -22,6 +23,7 @@ const CreateCard = () => {
     name: yup.string().min(2).max(30).required("Required"),
     price: yup.string().min(2).max(30).required("Required"),
     label: yup.string().min(4).max(1000).required("Required"),
+    phone: yup.string().min(9).max(30).required("Required"),
 
   });
   return (
@@ -79,6 +81,18 @@ const CreateCard = () => {
                   isValid={!errors.label && touched.label}
                   isInvalid={!!errors.label}
                   value={values.label}
+                />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>Phone</Form.Label>
+                <Form.Control
+                  name="phone"
+                  onChange={handleChange}
+                  type="number"
+                  placeholder="Enter phone"
+                  isValid={!errors.phone && touched.phone}
+                  isInvalid={!!errors.phone}
+                  value={values.phone}
                 />
               </Form.Group>
 

@@ -1,15 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Form, Button } from "react-bootstrap";
+import { useHistory } from "react-router-dom";
 import "../index.css";
 import * as yup from "yup";
 import { Formik } from "formik";
+import { adminContext } from "../contexts/AdminContex";
 
 const SignUpPage = () => {
+  const { signUpUser } = React.useContext(adminContext);
+  const history = useHistory();
   const schema = yup.object().shape({
     name: yup.string().min(2).max(30).required("Required"),
     lastName: yup.string().min(2).max(30).required("Required"),
     phoneNumber: yup.string().min(9).max(30).required("Required"),
-    gender: yup.string().min(4).max(6).required("Required"),
     email: yup.string().email().min(3).max(255).required("Required"),
     password: yup
       .string()
@@ -19,18 +22,33 @@ const SignUpPage = () => {
       .required("Required"),
   });
 
+  function handleSignup(data) {
+    console.log("???");
+    // e.preventDefault();
+    signUpUser(
+      data.name,
+      data.lastName,
+      data.email,
+      data.phoneNumber,
+      data.password
+    );
+    history.push("/");
+  }
+  function handleCloseSubmit() {}
+  console.log(handleSignup);
   return (
     <div className="signup">
       <Formik
         validationSchema={schema}
-        onSubmit={(data) => console.log(data)}
+        onSubmit={(data) => {
+          handleSignup(data);
+        }}
         initialValues={{
           name: "",
           lastName: "",
-          phoneNumber: "",
-          gender: "",
           email: "",
           password: "",
+          phoneNumber: "",
         }}
       >
         {({ handleSubmit, handleChange, values, touched, errors }) => (
@@ -78,25 +96,6 @@ const SignUpPage = () => {
               />
               <Form.Control.Feedback type="inValid">
                 {errors.phoneNumber}
-              </Form.Control.Feedback>
-            </Form.Group>
-
-            <Form.Group className="mb-3">
-              <Form.Label>Gender</Form.Label>
-              <Form.Select
-                aria-label="Floating label select example"
-                onChange={handleChange}
-                name="gender"
-                isValid={!errors.gender && touched.gender}
-                isInvalid={!!errors.gender}
-                value={values.gender}
-              >
-                <option>Select your gender</option>
-                <option value="female">Female</option>
-                <option value="male">Male</option>
-              </Form.Select>
-              <Form.Control.Feedback type="inValid">
-                {errors.gender}
               </Form.Control.Feedback>
             </Form.Group>
 
