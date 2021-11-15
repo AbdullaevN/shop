@@ -28,7 +28,7 @@ const HomePage = () => {
   }
   return (
     <div className="main-nav">
-      <Navbar className="fixed-top navbar " bg="light" expand="lg">
+      <Navbar className="navbar " bg="light" expand="lg">
         <Container fluid>
           <Navbar.Brand href="#"></Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
