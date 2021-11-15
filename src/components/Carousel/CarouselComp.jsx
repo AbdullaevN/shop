@@ -13,6 +13,7 @@ const CarouselComp = () => {
     <div>
       <Carousel fade>
         <Carousel.Item>
+          <hr />
           <img
             className="d-block w-100 h-100"
             src={Vid}
