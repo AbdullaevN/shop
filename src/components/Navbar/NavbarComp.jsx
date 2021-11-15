@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import {
   Container,
   Form,
@@ -7,15 +7,18 @@ import {
   Navbar,
   NavDropdown,
   Button,
+  Badge,
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Logo from "./TAMLER.svg";
 import "./NavbarComp.css";
 import { mainContext } from "../../contexts/MainContext";
 import { useHistory } from "react-router-dom";
+import { adminContext } from "../../contexts/AdminContex";
 
 const HomePage = () => {
   const { getProducts } = useContext(mainContext);
+  const { user, logoutUser, setUser } = React.useContext(adminContext);
   const history = useHistory();
   let object = new URLSearchParams(window.location.search);
   function filterProducts(key, value) {
@@ -26,9 +29,65 @@ const HomePage = () => {
     getProducts();
     // console.log(newUrl);
   }
+
+  let button;
+  function logout() {
+    logoutUser();
+    localStorage.clear();
+  }
+
+  console.log(user, "user");
+  if (user) {
+    let struser = JSON.stringify(user);
+    localStorage.setItem("user", struser);
+    button = (
+      <>
+        <Navbar.Collapse
+          className="justify-content-end me-2 navbar"
+          style={{ maxWidth: "200px" }}
+        >
+          <Navbar.Text>
+            Signed in as: <Badge bg="secondary">{user.name}</Badge>
+          </Navbar.Text>
+        </Navbar.Collapse>
+        <Button className="me-2" variant="primary" onClick={() => logout()}>
+          Logout
+        </Button>
+      </>
+    );
+  } else {
+    button = (
+      <>
+        {/* <Button
+          className="me-2 text-success"
+          variant="outline-dark"
+          onClick={handleShowLogin}
+        >
+          Log In
+        </Button>
+        <Button
+          className="me-2 text-success"
+          variant="outline-dark"
+          onClick={handleShow}
+        >
+          Sign Up
+        </Button> */}
+      </>
+    );
+  }
+
+  let struser = localStorage.getItem("user");
+  function setuser() {
+    if (struser) {
+      setUser(JSON.parse(struser));
+    }
+  }
+  useEffect(() => setuser(), [struser]);
+
   return (
     <div className="main-nav">
       <Navbar className="navbar " bg="light" expand="lg">
+
         <Container fluid>
           <Navbar.Brand href="#"></Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
@@ -63,11 +122,11 @@ const HomePage = () => {
                 Link
               </Nav.Link>
 
-            <div className='logo'>
-            <Link to="/">
-                <img src={Logo} alt="logo"></img>
-              </Link>
-            </div>
+              <div className="logo">
+                <Link to="/">
+                  <img src={Logo} alt="logo"></img>
+                </Link>
+              </div>
             </Nav>
             <Form className="d-flex ">
               <FormControl
@@ -77,7 +136,7 @@ const HomePage = () => {
                 className="me-2 justify-content-center"
                 aria-label="Search"
               />
-
+              {button}
               <Link to="/create" className="">
                 <Button className="for-font" variant="outline-success">
                   Add

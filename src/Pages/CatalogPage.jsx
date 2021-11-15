@@ -1,5 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import AddedCard from "../components/AddedCard/AddedCard";
+import MyPagination from "../components/Pagination/Pagination";
+import Pagination from "../components/Pagination/Pagination";
 import { mainContext } from "../contexts/MainContext";
 
 const CatalogPage = () => {
@@ -12,9 +14,14 @@ const CatalogPage = () => {
       {products ? (
         products.length ? (
           //
-          <AddedCard />
+          <>
+            <AddedCard />
+            <MyPagination />
+          </>
         ) : (
-          <h2>Товаров нет</h2>
+          <div className="empty">
+            <h2>Товаров нет</h2>
+          </div>
         )
       ) : (
         <h2>Loading...</h2>

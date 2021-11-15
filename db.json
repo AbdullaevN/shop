@@ -1,20 +1,211 @@
 {
+  "users": [
+    {
+      "username": "nurlan",
+      "lastName": "nno",
+      "email": "nurlanabdullaev9820@gmail.com",
+      "phoneNumber": 7878787454,
+      "password": "qwerty17",
+      "id": 1
+    }
+  ],
   "products": [
     {
-      "name": "77777777771",
-      "price": "7777777777",
-      "phone": 777777777777,
-      "label": "7777777777",
-      "file": "",
+      "name": "jewerly",
+      "price": "500",
+      "phone": 7878784548,
+      "label": "ergergrt ergrtg erg erg erg erg retg trg trgt r",
       "id": 1
     },
     {
-      "name": "rttyruiby",
-      "price": "576t7ygu7",
-      "phone": 8776567959764976,
-      "label": "gre4",
-      "file": "",
+      "name": "uygu",
+      "price": "666",
+      "phone": 876238429,
+      "label": "raz dva tri chetyre kjhkk",
+      "id": 2
+    },
+    {
+      "name": "jewerlyOne",
+      "price": "550",
+      "phone": 45874556892,
+      "label": "ksad goiejwrg erogiohe lkhlashr skjgiucgs iugiuagetrb iuwgiuegrb ",
       "id": 3
+    },
+    {
+      "name": "jewerlyOne",
+      "price": "550",
+      "phone": 45874556892,
+      "label": "ksad goiejwrg erogiohe lkhlashr skjgiucgs iugiuagetrb iuwgiuegrb ",
+      "id": 4
+    },
+    {
+      "name": "jewerlyOne",
+      "price": "550",
+      "phone": 45874556892,
+      "label": "ksad goiejwrg erogiohe lkhlashr skjgiucgs iugiuagetrb iuwgiuegrb ",
+      "id": 5
+    },
+    {
+      "name": "jewerlyOne",
+      "price": "550",
+      "phone": 45874556892,
+      "label": "ksad goiejwrg erogiohe lkhlashr skjgiucgs iugiuagetrb iuwgiuegrb ",
+      "id": 6
+    },
+    {
+      "name": "jewerlyOne",
+      "price": "550",
+      "phone": 45874556892,
+      "label": "ksad goiejwrg erogiohe lkhlashr skjgiucgs iugiuagetrb iuwgiuegrb ",
+      "id": 7
+    },
+    {
+      "name": "jewerlyOne",
+      "price": "550",
+      "phone": 45874556892,
+      "label": "ksad goiejwrg erogiohe lkhlashr skjgiucgs iugiuagetrb iuwgiuegrb ",
+      "id": 8
+    },
+    {
+      "name": "jewerlyOne",
+      "price": "550",
+      "phone": 45874556892,
+      "label": "ksad goiejwrg erogiohe lkhlashr skjgiucgs iugiuagetrb iuwgiuegrb ",
+      "id": 9
+    },
+    {
+      "name": "jewerlyOne",
+      "price": "550",
+      "phone": 45874556892,
+      "label": "ksad goiejwrg erogiohe lkhlashr skjgiucgs iugiuagetrb iuwgiuegrb ",
+      "id": 10
+    },
+    {
+      "name": "jewerlyOne",
+      "price": "550",
+      "phone": 45874556892,
+      "label": "ksad goiejwrg erogiohe lkhlashr skjgiucgs iugiuagetrb iuwgiuegrb ",
+      "id": 11
+    },
+    {
+      "name": "jewerlyOne",
+      "price": "550",
+      "phone": 45874556892,
+      "label": "ksad goiejwrg erogiohe lkhlashr skjgiucgs iugiuagetrb iuwgiuegrb ",
+      "id": 12
+    },
+    {
+      "name": "jewerlyOne",
+      "price": "550",
+      "phone": 45874556892,
+      "label": "ksad goiejwrg erogiohe lkhlashr skjgiucgs iugiuagetrb iuwgiuegrb ",
+      "id": 13
+    },
+    {
+      "name": "jewerlyOne",
+      "price": "550",
+      "phone": 45874556892,
+      "label": "ksad goiejwrg erogiohe lkhlashr skjgiucgs iugiuagetrb iuwgiuegrb ",
+      "id": 14
+    },
+    {
+      "name": "jewerlyOne",
+      "price": "550",
+      "phone": 45874556892,
+      "label": "ksad goiejwrg erogiohe lkhlashr skjgiucgs iugiuagetrb iuwgiuegrb ",
+      "id": 15
+    },
+    {
+      "name": "jewerlyOne",
+      "price": "550",
+      "phone": 45874556892,
+      "label": "ksad goiejwrg erogiohe lkhlashr skjgiucgs iugiuagetrb iuwgiuegrb ",
+      "id": 16
+    },
+    {
+      "name": "jewerlyOne",
+      "price": "550",
+      "phone": 45874556892,
+      "label": "ksad goiejwrg erogiohe lkhlashr skjgiucgs iugiuagetrb iuwgiuegrb ",
+      "id": 17
+    },
+    {
+      "name": "jewerlyOne",
+      "price": "550",
+      "phone": 45874556892,
+      "label": "ksad goiejwrg erogiohe lkhlashr skjgiucgs iugiuagetrb iuwgiuegrb ",
+      "id": 18
+    },
+    {
+      "name": "jewerlyOne",
+      "price": "550",
+      "phone": 45874556892,
+      "label": "ksad goiejwrg erogiohe lkhlashr skjgiucgs iugiuagetrb iuwgiuegrb ",
+      "id": 19
+    },
+    {
+      "name": "jewerlyOne",
+      "price": "550",
+      "phone": 45874556892,
+      "label": "ksad goiejwrg erogiohe lkhlashr skjgiucgs iugiuagetrb iuwgiuegrb ",
+      "id": 20
+    },
+    {
+      "name": "jewerlyOne",
+      "price": "550",
+      "phone": 45874556892,
+      "label": "ksad goiejwrg erogiohe lkhlashr skjgiucgs iugiuagetrb iuwgiuegrb ",
+      "id": 21
+    },
+    {
+      "name": "jewerlyOne",
+      "price": "550",
+      "phone": 45874556892,
+      "label": "ksad goiejwrg erogiohe lkhlashr skjgiucgs iugiuagetrb iuwgiuegrb ",
+      "id": 22
+    },
+    {
+      "name": "jewerlyOne",
+      "price": "550",
+      "phone": 45874556892,
+      "label": "ksad goiejwrg erogiohe lkhlashr skjgiucgs iugiuagetrb iuwgiuegrb ",
+      "id": 23
+    },
+    {
+      "name": "jewerlyOne",
+      "price": "550",
+      "phone": 45874556892,
+      "label": "ksad goiejwrg erogiohe lkhlashr skjgiucgs iugiuagetrb iuwgiuegrb ",
+      "id": 24
+    },
+    {
+      "name": "jewerlyOne",
+      "price": "550",
+      "phone": 45874556892,
+      "label": "ksad goiejwrg erogiohe lkhlashr skjgiucgs iugiuagetrb iuwgiuegrb ",
+      "id": 25
+    },
+    {
+      "name": "jewerlyOne",
+      "price": "550",
+      "phone": 45874556892,
+      "label": "ksad goiejwrg erogiohe lkhlashr skjgiucgs iugiuagetrb iuwgiuegrb ",
+      "id": 26
+    },
+    {
+      "name": "jewerlyOne",
+      "price": "550",
+      "phone": 45874556892,
+      "label": "ksad goiejwrg erogiohe lkhlashr skjgiucgs iugiuagetrb iuwgiuegrb ",
+      "id": 27
+    },
+    {
+      "name": "jewerlyOne",
+      "price": "550",
+      "phone": 45874556892,
+      "label": "ksad goiejwrg erogiohe lkhlashr skjgiucgs iugiuagetrb iuwgiuegrb ",
+      "id": 28
+
     }
   ]
 }

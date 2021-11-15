@@ -1,16 +1,16 @@
 import { Formik } from "formik";
-import React from "react";
+import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
+import { useHistory } from "react-router-dom";
 import * as yup from "yup";
-import NavbarComp from "../components/Navbar/NavbarComp";
+import { adminContext } from "../contexts/AdminContex";
 
-const SignInPage = () => {
+const SignInPage = (props) => {
+  const history = useHistory();
+  const { loginUser } = React.useContext(adminContext);
   const schema = yup.object().shape({
     name: yup.string().min(2).max(30).required("Required"),
-    lastName: yup.string().min(2).max(30).required("Required"),
-    phoneNumber: yup.string().min(9).max(30).required("Required"),
-    gender: yup.string().min(4).max(6).required("Required"),
-    email: yup.string().email().min(3).max(255).required("Required"),
+
     password: yup
       .string()
       .matches(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/)
@@ -18,6 +18,21 @@ const SignInPage = () => {
       .max(24)
       .required("Required"),
   });
+
+  const [user, setUser] = useState({ username: "", password: "" });
+  // console.log(state)
+  function handleChange(e) {
+    let userr = { ...user, [e.target.name]: e.target.value };
+    setUser(userr);
+  }
+
+  function handleLogIn(e) {
+    e.preventDefault();
+    loginUser(user.username, user.password);
+    history.push("/");
+    console.log("aaaa");
+  }
+
   return (
     <>
       <div className="signup ">
@@ -26,28 +41,25 @@ const SignInPage = () => {
           onSubmit={(data) => console.log(data)}
           initialValues={{
             name: "",
-            lastName: "",
-            phoneNumber: "",
-            gender: "",
-            email: "",
+
             password: "",
           }}
         >
           {({ handleSubmit, handleChange, values, touched, errors }) => (
-            <Form onSubmit={handleSubmit}>
+            <Form onSubmit={handleLogIn}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Email address</Form.Label>
+                <Form.Label>User Name</Form.Label>
                 <Form.Control
                   onChange={handleChange}
-                  name="email"
-                  isValid={!errors.email && touched.email}
-                  isInvalid={!!errors.email}
-                  type="email"
-                  placeholder="Enter your email"
-                  value={values.email}
+                  name="name"
+                  isValid={!errors.name && touched.name}
+                  isInvalid={!!errors.name}
+                  type="name"
+                  placeholder="Your'e username"
+                  value={values.name}
                 />
                 <Form.Control.Feedback type="inValid">
-                  {errors.email}
+                  {errors.name}
                 </Form.Control.Feedback>
               </Form.Group>
 

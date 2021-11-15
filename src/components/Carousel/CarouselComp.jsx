@@ -1,12 +1,12 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
 import "./CarouselComp.css";
-import slide1  from './photos/1.jpg'
-import slide2 from './photos/2.jpg'
-import slide3 from './photos/5.jpg'
-import slide4 from './photos/6.jpg'
-import slide5 from './photos/7.jpg'
-
+import slide1 from "./photos/1.jpg";
+import slide2 from "./photos/2.jpg";
+import slide3 from "./photos/5.jpg";
+import slide4 from "./photos/6.jpg";
+import slide5 from "./photos/7.jpg";
+import Vid from "./photos/vid.gif";
 
 const CarouselComp = () => {
   return (
@@ -14,10 +14,11 @@ const CarouselComp = () => {
       <Carousel fade>
         <Carousel.Item>
           <img
-            className="d-block w-100 h-100" 
-            src={slide5}
+            className="d-block w-100 h-100"
+            src={Vid}
             alt="First slide"
-          />
+          ></img>
+
           <Carousel.Caption>
             <h3>First slide label</h3>
             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
@@ -36,11 +37,7 @@ const CarouselComp = () => {
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img
-            className="d-block w-100 h-100"
-            src={slide4}
-            alt="Third slide"
-          />
+          <img className="d-block w-100 h-100" src={slide4} alt="Third slide" />
 
           <Carousel.Caption>
             <h3>Third slide label</h3>
