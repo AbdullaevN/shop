@@ -21,7 +21,9 @@ const HomePage = () => {
           //
           <AddedCard />
         ) : (
-          <h2>Товаров нет</h2>
+          <div className="d-flex h-50">
+            <h2>Товаров нет</h2>
+          </div>
         )
       ) : (
         <h2>Loading...</h2>

@@ -21,6 +21,9 @@ code {
   width: 350px;
 }
 
-.signup{
+.signup {
   margin-top: 100px;
+}
+.empty {
+  height: 300px;
 }
