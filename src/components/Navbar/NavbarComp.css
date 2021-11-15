@@ -4,9 +4,7 @@
   position: relative;
 }
 
-
-
-.navbar{
+.navbar {
   opacity: 0.8;
 }
 .navbar img {
@@ -30,4 +28,11 @@
 .catalog {
   text-decoration: none;
   color: black;
+}
+.logout {
+  height: 10px;
+}
+.sign {
+  width: 60px;
+  height: 30px;
 }
