@@ -13,6 +13,7 @@ import CatalogPage from "./Pages/CatalogPage";
 import Footer from "./components/Footer/Footer";
 import AdminPage from "./Pages/AdminPage";
 import AdminContextProvider from "./contexts/AdminContex";
+import NewsPage from "./Pages/NewsPage/NewsPage";
 
 const Routes = () => {
   return (
@@ -30,6 +31,7 @@ const Routes = () => {
             <Route exact path="/sign-in" component={SignInPage} />
             <Route exact path="/sign-up" component={SignUpPage} />
             <Route exact path="/order" component={OrderPage} />
+            <Route exact path="/news" component={NewsPage} />
             <Route exact path="/created" component={CatalogPage} />
           </Switch>
           <Footer />

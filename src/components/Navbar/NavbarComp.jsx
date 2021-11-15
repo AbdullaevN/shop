@@ -87,7 +87,6 @@ const HomePage = () => {
   return (
     <div className="main-nav">
       <Navbar className="navbar " bg="light" expand="lg">
-
         <Container fluid>
           <Navbar.Brand href="#"></Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
@@ -103,10 +102,11 @@ const HomePage = () => {
                 </Link>
               </Nav.Link>
               <Nav.Link className="for-font" href="#action2">
-                {/* <input type="button" onClick="document.getElementById('#section2').scrollIntoView();" />Section */}
-                Section
+                <Link to="/order" className="catalog">
+                  Order
+                </Link>
               </Nav.Link>
-              <NavDropdown title="Link" id="navbarScrollingDropdown">
+              {/* <NavDropdown title="Link" id="navbarScrollingDropdown">
                 <NavDropdown.Item className="for-font" href="#action3">
                   Action
                 </NavDropdown.Item>
@@ -117,9 +117,11 @@ const HomePage = () => {
                 <NavDropdown.Item className="for-font" href="#action5">
                   Something else here
                 </NavDropdown.Item>
-              </NavDropdown>
+              </NavDropdown> */}
               <Nav.Link className="for-font" href="#">
-                Link
+                <Link style={{textDecoration:'none', color:'black'}} to="/news">
+                  News
+                </Link>
               </Nav.Link>
 
               <div className="logo">

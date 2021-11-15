@@ -7,6 +7,14 @@
       "phoneNumber": 7878787454,
       "password": "qwerty17",
       "id": 1
+    },
+    {
+      "username": "aidaaaarov",
+      "lastName": "Kazymbaevvvvv",
+      "email": "kazymbaevaidar@gmail.com",
+      "phoneNumber": 709888470,
+      "password": "alenaaaaaaaa11",
+      "id": 2
     }
   ],
   "products": [
@@ -205,7 +213,6 @@
       "phone": 45874556892,
       "label": "ksad goiejwrg erogiohe lkhlashr skjgiucgs iugiuagetrb iuwgiuegrb ",
       "id": 28
-
     }
   ]
 }
