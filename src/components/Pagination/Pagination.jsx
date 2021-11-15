@@ -1,4 +1,3 @@
-import { lightBlue } from "@mui/material/colors";
 import React, { useContext } from "react";
 import { mainContext } from "../../contexts/MainContext";
 

@@ -21,18 +21,15 @@ const AddedCard = () => {
       <div className="container card-div ">
         {currentPosts.map((item) => (
           <Card className="card" key={item.id}>
-            <Card.Img variant="top" src={Logo} />
+
             <Card.Body>
-              <Card.Title>Card Title</Card.Title>
+              <Card.Title>Jewelry</Card.Title>
             </Card.Body>
             <ListGroup className="list-group-flush  ">
               <ListGroupItem className="inp">{item.name}</ListGroupItem>
               <ListGroupItem className="inp">{item.price}</ListGroupItem>
-              <ListGroupItem className="inp">{item.phone}</ListGroupItem>
-              <ListGroupItem style={{ height: "80px" }} className="inp">
-                {item.label}
-              </ListGroupItem>
-              <ListGroupItem className="inp">{item.label}</ListGroupItem>
+
+              <ListGroupItem className="inp" style={{ height: "250px" }} >{item.details}</ListGroupItem>
             </ListGroup>
             <Card.Body>
               <Link to={`/edit/${item.id}`}>
