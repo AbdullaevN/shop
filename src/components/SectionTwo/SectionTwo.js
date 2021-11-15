@@ -5,7 +5,7 @@ const SectionTwo = ({id}) => {
   return (
     <div id={id} className="mainBlockOfPics">
       <h1 style={{ marginTop: "40px", marginBottom: "80px" }}>
-        Необычные и уникальные решения
+        Необычные и уникальные украшения
       </h1>
 
       <div className="twoPics">
