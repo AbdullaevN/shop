@@ -12,6 +12,7 @@ const CreateCard = () => {
     price: "",
     label: "",
     phone: "",
+
   });
 
   const data = useContext(mainContext);
@@ -23,6 +24,7 @@ const CreateCard = () => {
     price: yup.string().min(2).max(30).required("Required"),
     label: yup.string().min(4).max(1000).required("Required"),
     phone: yup.string().min(9).max(30).required("Required"),
+
   });
   return (
     <div>
@@ -36,8 +38,9 @@ const CreateCard = () => {
           initialValues={{
             name: "",
             price: "",
-            phone: "",
+
             label: "",
+
           }}
         >
           {({ handleSubmit, handleChange, values, touched, errors }) => (
@@ -71,6 +74,7 @@ const CreateCard = () => {
                 <Form.Label>label</Form.Label>
                 <Form.Control
                   name="label"
+                  style={{ height: " " }}
                   onChange={handleChange}
                   type="label"
                   placeholder="Enter label"
@@ -91,6 +95,8 @@ const CreateCard = () => {
                   value={values.phone}
                 />
               </Form.Group>
+
+
 
               <Button variant="primary" type="submit">
                 Submit

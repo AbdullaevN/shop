@@ -31,6 +31,7 @@ const AddedCard = () => {
               <ListGroupItem style={{ height: "80px" }} className="inp">
                 {item.label}
               </ListGroupItem>
+              <ListGroupItem className="inp">{item.label}</ListGroupItem>
             </ListGroup>
             <Card.Body>
               <Link to={`/edit/${item.id}`}>
