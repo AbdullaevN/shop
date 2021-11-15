@@ -15,10 +15,18 @@
       "phoneNumber": 709888470,
       "password": "alenaaaaaaaa11",
       "id": 2
+    },
+    {
+      "username": "nurlann",
+      "lastName": "nno",
+      "email": "nurlanabdullaev9820@gmail.com",
+      "phoneNumber": 123456789,
+      "password": "787878qw",
+      "id": 3
     }
   ],
   "products": [
-    {
+   {
       "name": "Elsa Moon Necklace",
       "price": "$20.14 USD",
       "details": "Materials: Gold Plated Brass, cubic zirconia, hypoallergenic",

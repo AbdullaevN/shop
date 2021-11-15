@@ -36,6 +36,13 @@ const HomePage = () => {
     localStorage.clear();
   }
 
+  let struser = localStorage.getItem("user");
+  function setuser() {
+    if (struser) {
+      setUser(JSON.parse(struser));
+    }
+  }
+  useEffect(() => setuser(), [struser]);
   console.log(user, "user");
   if (user) {
     let struser = JSON.stringify(user);
@@ -50,8 +57,13 @@ const HomePage = () => {
             Signed in as: <Badge bg="secondary">{user.name}</Badge>
           </Navbar.Text>
         </Navbar.Collapse>
-        <Button className="" variant="primary" onClick={() => logout()}>
-          <i class="bi bi-box-arrow-right"></i>
+        <Button
+          className=""
+          style={{ height: "30px" }}
+          variant="primary"
+          onClick={() => logout()}
+        >
+          <i class="bi bi-box-arrow-right "></i>
         </Button>
       </>
     );
@@ -75,14 +87,6 @@ const HomePage = () => {
       </>
     );
   }
-
-  let struser = localStorage.getItem("user");
-  function setuser() {
-    if (struser) {
-      setUser(JSON.parse(struser));
-    }
-  }
-  useEffect(() => setuser(), [struser]);
 
   return (
     <div className="main-nav mb-5">
@@ -119,7 +123,10 @@ const HomePage = () => {
                 </NavDropdown.Item>
               </NavDropdown> */}
               <Nav.Link className="for-font" href="#">
-                <Link style={{textDecoration:'none', color:'black'}} to="/news">
+                <Link
+                  style={{ textDecoration: "none", color: "black" }}
+                  to="/news"
+                >
                   News
                 </Link>
               </Nav.Link>
