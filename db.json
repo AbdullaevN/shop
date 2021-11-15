@@ -15,7 +15,23 @@
       "phoneNumber": 709888470,
       "password": "alenaaaaaaaa11",
       "id": 2
+    },
+    {
+      "username": "nurlann",
+      "lastName": "nno",
+      "email": "nurlanabdullaev9820@gmail.com",
+      "phoneNumber": 123456789,
+      "password": "787878qw",
+      "id": 3
     }
   ],
-  "products": []
+  "products": [
+    {
+      "name": "iygk",
+      "price": "786876",
+      "label": "87687uyfouj",
+      "phone": 7854643453,
+      "id": 1
+    }
+  ]
 }

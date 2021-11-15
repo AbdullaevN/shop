@@ -77,6 +77,7 @@ const AdminContextProvider = (props) => {
       let res = await axios(APIusers);
       let user = res.data.find((user) => user.username === username);
       let bool = false;
+      console.log(res.data);
       if (user) {
         bool = user.password === password ? true : false;
       }
