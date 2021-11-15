@@ -86,7 +86,8 @@ const HomePage = () => {
 
   return (
     <div className="main-nav">
-      <Navbar className=" navbar " bg="light" expand="lg">
+      <Navbar className="navbar " bg="light" expand="lg">
+
         <Container fluid>
           <Navbar.Brand href="#"></Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />

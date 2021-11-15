@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import Footer from "../components/Footer/Footer";
 import SectionOne from "../components/SectionOne/SectionOne";
 import SectionTwo from "../components/SectionTwo/SectionTwo";
+import SectionThree from "../components/SectionThree/SectionThree";
 
 const HomePage = () => {
   const { products, getProducts } = useContext(mainContext);
@@ -30,6 +31,7 @@ const HomePage = () => {
       )}
       <SectionOne />
       <SectionTwo id="section2" />
+      <SectionThree />
       {/* <Footer /> */}
     </div>
   );
