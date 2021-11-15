@@ -1,4 +1,4 @@
-import React, { useReducer } from "react";
+import React, { useEffect, useReducer, useState } from "react";
 import axios from "axios";
 import { API } from "../helpers/const";
 
@@ -84,6 +84,32 @@ const MainContextProvider = (props) => {
       console.log(e);
     }
   };
+
+  //Пагинация
+  const [posts, setPosts] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage] = useState(6);
+
+  useEffect(() => {
+    if (state.products) {
+      const data = state.products;
+      setPosts(data);
+    }
+  }, [state.products]);
+
+  const numberOfLastPost = currentPage * postsPerPage;
+  const numberOfFirstPost = numberOfLastPost - postsPerPage;
+  const currentPosts = posts.slice(numberOfFirstPost, numberOfLastPost);
+  const totalPosts = posts.length;
+  //
+
+  const handlePage = (newPage) => {
+    setCurrentPage(newPage);
+  };
+
+  function resetCurrentPage() {
+    setCurrentPage(1);
+  }
   return (
     <mainContext.Provider
       value={{
@@ -93,8 +119,17 @@ const MainContextProvider = (props) => {
         deleteProduct,
         getProductsEdit,
         saveGetProductsEdit,
+        //
+        handlePage,
+        //
         products: state.products,
         productEdit: state.productEdit,
+
+        //
+        totalPosts: totalPosts,
+        currentPosts: currentPosts,
+        postsPerPage: postsPerPage,
+        currentPage: currentPage,
       }}
     >
       {props.children}

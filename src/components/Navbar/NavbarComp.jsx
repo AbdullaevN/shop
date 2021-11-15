@@ -50,8 +50,8 @@ const HomePage = () => {
             Signed in as: <Badge bg="secondary">{user.name}</Badge>
           </Navbar.Text>
         </Navbar.Collapse>
-        <Button className="me-2" variant="primary" onClick={() => logout()}>
-          Logout
+        <Button className="" variant="primary" onClick={() => logout()}>
+          <i class="bi bi-box-arrow-right"></i>
         </Button>
       </>
     );
@@ -87,7 +87,6 @@ const HomePage = () => {
   return (
     <div className="main-nav">
       <Navbar className="navbar " bg="light" expand="lg">
-
         <Container fluid>
           <Navbar.Brand href="#"></Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
@@ -144,12 +143,12 @@ const HomePage = () => {
               </Link>
             </Form>
             <Link to="/sign-in" className="">
-              <Button className="for-font" variant="outline-success">
+              <Button className="for-font sign" variant="outline-success">
                 Sign In
               </Button>
             </Link>
             <Link to="/sign-up" className="">
-              <Button className="for-font" variant="outline-success">
+              <Button className="for-font sign" variant="outline-success">
                 Sign Up
               </Button>
             </Link>

@@ -6,7 +6,8 @@ import Logo from "../Navbar/TAMLER.svg";
 import "./AddedCard.css";
 
 const AddedCard = () => {
-  const { getProducts, products, deleteProduct } = useContext(mainContext);
+  const { getProducts, products, deleteProduct, currentPosts } =
+    useContext(mainContext);
   const params = useParams();
   const history = useHistory();
   useEffect(() => {
@@ -18,7 +19,7 @@ const AddedCard = () => {
   return (
     <Fragment>
       <div className="container card-div ">
-        {products.map((item) => (
+        {currentPosts.map((item) => (
           <Card className="card" key={item.id}>
             <Card.Img variant="top" src={Logo} />
             <Card.Body>

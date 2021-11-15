@@ -1,26 +1,35 @@
-import React from "react";
-import "./Pagination.css";
-import { Pagination } from "react-bootstrap";
+import { lightBlue } from "@mui/material/colors";
+import React, { useContext } from "react";
+import { mainContext } from "../../contexts/MainContext";
 
-const MyPagination = () => {
-  let active = 2;
-  let items = [];
-  for (let number = 1; number <= 5; number++) {
-    items.push(
-      <Pagination.Item key={number} active={number === active}>
-        {number}
-      </Pagination.Item>
-    );
+const Pagination = () => {
+  const { totalPosts, postsPerPage, handlePage, currentPage } =
+    React.useContext(mainContext);
+  const pageNumbers = [];
+  for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
+    pageNumbers.push(i);
   }
+  console.log(pageNumbers);
   return (
     <>
-      <div className="pag-div">
-        <div>
-          <Pagination>{items}</Pagination>
-        </div>
+      <div className="pagination">
+        <ul>
+          {pageNumbers.map((item) => (
+            <li key={item}>
+              <button
+                style={{
+                  background: item === currentPage ? "red" : "blue",
+                }}
+                onClick={() => handlePage(item)}
+              >
+                {item}
+              </button>
+            </li>
+          ))}
+        </ul>
       </div>
     </>
   );
 };
 
-export default MyPagination;
+export default Pagination;
