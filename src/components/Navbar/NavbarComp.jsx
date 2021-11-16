@@ -16,10 +16,11 @@ import { mainContext } from "../../contexts/MainContext";
 import { useHistory } from "react-router-dom";
 import { adminContext } from "../../contexts/AdminContex";
 import { authContext } from "../../contexts/AuthContext";
-
+import IconButton from "@mui/material/IconButton";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 const HomePage = () => {
   //test
-  const { getProducts } = useContext(mainContext);
+  const { getProducts, getPhones, phonesCountInCart } = useContext(mainContext);
   const { authWithGoogle, user, logOut } = React.useContext(authContext);
 
   const { logoutUser, setUser } = React.useContext(adminContext);
@@ -175,6 +176,22 @@ const HomePage = () => {
               <Button className="for-font sign" variant="outline-success">
                 Sign Up
               </Button>
+            </Link>
+            {/* <Link to="/cart" className="">
+              <Button className="for-font sign" variant="outline-success">
+                <i class="bi bi-cart2"></i>
+              </Button>
+            </Link> */}
+            <Link to="/cart">
+              <IconButton
+                size="large"
+                aria-label="show 4 new mails"
+                color="inherit"
+              >
+                <Badge badgeContent={phonesCountInCart} color="error">
+                  <ShoppingCartIcon />
+                </Badge>
+              </IconButton>
             </Link>
           </Navbar.Collapse>
         </Container>

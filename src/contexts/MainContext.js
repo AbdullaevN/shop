@@ -1,11 +1,16 @@
 import React, { useEffect, useReducer, useState } from "react";
 import axios from "axios";
 import { API } from "../helpers/const";
+import { calcSubPrice, calcTotalPrice } from "../helpers/calcPrice";
 
 export const mainContext = React.createContext();
 const INIT_STATE = {
   products: null,
   productEdit: null,
+  phonesCountInCart: JSON.parse(localStorage.getItem("cart"))
+    ? JSON.parse(localStorage.getItem("cart")).phones.length
+    : 0,
+  cart: null,
 };
 
 const reducer = (state = INIT_STATE, action) => {
@@ -16,6 +21,10 @@ const reducer = (state = INIT_STATE, action) => {
       return { ...state, productEdit: action.payload };
     case "CLEAR_PRODUCT_EDIT":
       return { ...state, productEdit: null };
+    case "ADD_AND_DELETE_PHONE_IN_CART":
+      return { ...state, phonesCountInCart: action.payload };
+    case "GET_CART":
+      return { ...state, cart: action.payload };
     default:
       return state;
   }
@@ -110,6 +119,100 @@ const MainContextProvider = (props) => {
   function resetCurrentPage() {
     setCurrentPage(1);
   }
+
+  //cart
+  const addEndDeletePhoneCart = (phone) => {
+    try {
+      let cart = JSON.parse(localStorage.getItem("cart"));
+      if (!cart) {
+        cart = {
+          phones: [],
+          totalPrice: 0,
+        };
+      }
+      let product = {
+        phone: phone,
+        count: 1,
+        subPrice: 0,
+      };
+      product.subPrice = calcSubPrice(product);
+      let checkArr = cart.phones.filter((item) => {
+        return item.phone.id === phone.id;
+      });
+      if (checkArr.length === 0) {
+        cart.phones.push(product);
+      } else {
+        cart.phones = cart.phones.filter((item) => {
+          return item.phone.id !== phone.id;
+        });
+      }
+      cart.totalPrice = calcTotalPrice(cart);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      let action = {
+        type: "ADD_AND_DELETE_PHONE_IN_CART",
+        payload: cart.phones.length,
+      };
+      dispatch(action);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  const checkPhoneInCart = (id) => {
+    try {
+      let cart = JSON.parse(localStorage.getItem("cart"));
+      if (!cart) {
+        cart = {
+          phones: [],
+          totalPrice: 0,
+        };
+      }
+      let checkArr = cart.phones.filter((item) => {
+        return item.phone.id === id;
+      });
+      if (checkArr.length === 0) {
+        return false;
+      } else {
+        return true;
+      }
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  //
+  const getCart = () => {
+    let cart = JSON.parse(localStorage.getItem("cart"));
+
+    if (!cart) {
+      cart = {
+        phones: [],
+        totalPrice: 0,
+      };
+    }
+    let action = {
+      type: "GET_CART",
+      payload: cart,
+    };
+    dispatch(action);
+  };
+
+  const changeCountPhone = (count, id) => {
+    if (count < 1) {
+      return;
+    }
+    let cart = JSON.parse(localStorage.getItem("cart"));
+    cart.phones = cart.phones.map((item) => {
+      if (item.phone.id === id) {
+        item.count = count;
+        item.subPrice = calcSubPrice(item);
+      }
+      return item;
+    });
+    cart.totalPrice = calcTotalPrice(cart);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    getCart();
+  };
   return (
     <mainContext.Provider
       value={{
@@ -122,6 +225,11 @@ const MainContextProvider = (props) => {
         //
         handlePage,
         //
+        addEndDeletePhoneCart,
+        checkPhoneInCart,
+        getCart,
+        changeCountPhone,
+        //
         products: state.products,
         productEdit: state.productEdit,
 
@@ -130,6 +238,8 @@ const MainContextProvider = (props) => {
         currentPosts: currentPosts,
         postsPerPage: postsPerPage,
         currentPage: currentPage,
+        phonesCountInCart: state.phonesCountInCart,
+        cart: state.cart,
       }}
     >
       {props.children}
