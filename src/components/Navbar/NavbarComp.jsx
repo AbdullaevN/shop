@@ -15,10 +15,13 @@ import "./NavbarComp.css";
 import { mainContext } from "../../contexts/MainContext";
 import { useHistory } from "react-router-dom";
 import { adminContext } from "../../contexts/AdminContex";
+import { authContext } from "../../contexts/AuthContext";
 
 const HomePage = () => {
   const { getProducts } = useContext(mainContext);
-  const { user, logoutUser, setUser } = React.useContext(adminContext);
+  const { authWithGoogle, user, logOut } = React.useContext(authContext);
+
+  const { logoutUser, setUser } = React.useContext(adminContext);
   const history = useHistory();
   let object = new URLSearchParams(window.location.search);
   function filterProducts(key, value) {
@@ -61,7 +64,7 @@ const HomePage = () => {
           className=""
           style={{ height: "30px" }}
           variant="primary"
-          onClick={() => logout()}
+          onClick={() => logOut()}
         >
           <i class="bi bi-box-arrow-right "></i>
         </Button>
@@ -84,6 +87,7 @@ const HomePage = () => {
         >
           Sign Up
         </Button> */}
+        <Button onClick={authWithGoogle}></Button>
       </>
     );
   }
