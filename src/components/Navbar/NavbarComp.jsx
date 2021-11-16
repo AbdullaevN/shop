@@ -18,6 +18,7 @@ import { adminContext } from "../../contexts/AdminContex";
 import { authContext } from "../../contexts/AuthContext";
 
 const HomePage = () => {
+  //test
   const { getProducts } = useContext(mainContext);
   const { authWithGoogle, user, logOut } = React.useContext(authContext);
 
