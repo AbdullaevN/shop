@@ -15,7 +15,7 @@ import AdminPage from "./Pages/AdminPage";
 import AdminContextProvider from "./contexts/AdminContex";
 import AuthContextProvider from "./contexts/AuthContext";
 import NewsPage from "./Pages/NewsPage/NewsPage";
-import CartPage from "./Pages/CartPage";
+import ContactPage from "./Pages/ContactPage"
 
 const Routes = () => {
   return (
@@ -36,6 +36,7 @@ const Routes = () => {
               <Route exact path="/order" component={OrderPage} />
               <Route exact path="/news" component={NewsPage} />
               <Route exact path="/created" component={CatalogPage} />
+              <Route exct path="/contacts" component={ContactPage} />
             </Switch>
             <Footer />
           </BrowserRouter>

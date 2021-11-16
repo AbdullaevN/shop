@@ -136,6 +136,14 @@ const HomePage = () => {
                   News
                 </Link>
               </Nav.Link>
+              <Nav.Link className="for-font" href="#">
+                <Link
+                  style={{ textDecoration: "none", color: "black" }}
+                  to="/contacts"
+                >
+                  Contacts
+                </Link>
+              </Nav.Link>
 
               <div className="logo">
                 <Link to="/">
