@@ -23,6 +23,7 @@ const CreateCard = () => {
     name: yup.string().min(2).max(30).required("Required"),
     price: yup.string().min(2).max(30).required("Required"),
     details: yup.string().min(4).max(1000).required("Required"),
+    image: yup.string().required('required')
 
   });
   return (
@@ -39,6 +40,7 @@ const CreateCard = () => {
             price: "",
 
             details: "",
+            image: ''
 
           }}
         >
@@ -80,6 +82,19 @@ const CreateCard = () => {
                   isValid={!errors.price && touched.price}
                   isInvalid={!!errors.price}
                   value={values.price}
+                />
+              </Form.Group>
+
+              <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Label>Price product</Form.Label>
+                <Form.Control
+                  name="image"
+                  onChange={handleChange}
+                  type="text"
+                  placeholder="enter image"
+                  isValid={!errors.image && touched.image}
+                  isInvalid={!!errors.image}
+                  value={values.image}
                 />
               </Form.Group>
 

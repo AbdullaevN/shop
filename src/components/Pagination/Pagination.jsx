@@ -17,7 +17,7 @@ const Pagination = () => {
             <li key={item}>
               <button
                 style={{
-                  background: item === currentPage ? "red" : "blue",
+                  background: item === currentPage ? "lightgrey" : "grey",
                 }}
                 onClick={() => handlePage(item)}
               >

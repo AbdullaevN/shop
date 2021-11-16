@@ -14,6 +14,7 @@ import Footer from "./components/Footer/Footer";
 import AdminPage from "./Pages/AdminPage";
 import AdminContextProvider from "./contexts/AdminContex";
 import NewsPage from "./Pages/NewsPage/NewsPage";
+import CartPage from "./Pages/CartPage";
 
 const Routes = () => {
   return (
@@ -33,6 +34,7 @@ const Routes = () => {
             <Route exact path="/order" component={OrderPage} />
             <Route exact path="/news" component={NewsPage} />
             <Route exact path="/created" component={CatalogPage} />
+            {/* <Route path="/cart" component={CartPage} /> */}
           </Switch>
           <Footer />
         </BrowserRouter>

@@ -16,6 +16,7 @@ const AddedCard = () => {
 
   //
   //TEST
+  console.log();
   return (
     <Fragment>
       <div className="container card-div ">
@@ -23,13 +24,15 @@ const AddedCard = () => {
           <Card className="card" key={item.id}>
 
             <Card.Body>
+              <img style={{ width: '200px', height: '300px' }} src={item.image} />
+
               <Card.Title>Jewelry</Card.Title>
             </Card.Body>
             <ListGroup className="list-group-flush  ">
               <ListGroupItem className="inp">{item.name}</ListGroupItem>
               <ListGroupItem className="inp">{item.price}</ListGroupItem>
 
-              <ListGroupItem className="inp" style={{ height: "250px" }} >{item.details}</ListGroupItem>
+              <ListGroupItem className="inp" style={{ height: "250px" }} color="red">{item.details}</ListGroupItem>
             </ListGroup>
             <Card.Body>
               <Link to={`/edit/${item.id}`}>
