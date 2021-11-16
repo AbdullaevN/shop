@@ -7,7 +7,37 @@ import { Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Button from "@restart/ui/esm/Button";
 
+//
+// import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
+
+// const containerStyle = {
+//   width: "400px",
+//   height: "400px",
+// };
+
+// const center = {
+//   lat: -3.745,
+//   lng: -38.523,
+// };
+//
+
 const Footer = () => {
+  // const { isLoaded } = useJsApiLoader({
+  //   id: "google-map-script",
+  //   googleMapsApiKey: "YOUR_API_KEY",
+  // });
+
+  // const [map, setMap] = React.useState(null);
+
+  // const onLoad = React.useCallback(function callback(map) {
+  //   const bounds = new window.google.maps.LatLngBounds();
+  //   map.fitBounds(bounds);
+  //   setMap(map);
+  // }, []);
+
+  // const onUnmount = React.useCallback(function callback(map) {
+  //   setMap(null);
+  // }, []);
   return (
     <Fragment>
       <div className="mainFtr ">
@@ -48,10 +78,19 @@ const Footer = () => {
               Получите доступ к эксклюзивным скидкам
             </span>
             {/* <input type="email" placeholder="Email"></input> */}
-            <Form onSubmit={(e) => {
-              e.preventDefault()
-              console.log("worked")
-            }}>
+            <Form
+              onSubmit={(e) => {
+                e.preventDefault();
+                console.log("worked");
+              }}
+            >
+              {/* <GoogleMap
+                mapContainerStyle={containerStyle}
+                center={center}
+                zoom={10}
+                onLoad={onLoad}
+                onUnmount={onUnmount}
+              ></GoogleMap> */}
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
                 <Form.Control type="email" placeholder="Enter email" />
@@ -59,7 +98,7 @@ const Footer = () => {
                   We'll never share your email with anyone else.
                 </Form.Text>
               </Form.Group>
-{/* 
+              {/* 
               <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Label>Password</Form.Label>
                 <Form.Control type="password" placeholder="Password" />
@@ -82,4 +121,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default React.memo(Footer);

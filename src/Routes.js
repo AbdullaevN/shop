@@ -13,31 +13,34 @@ import CatalogPage from "./Pages/CatalogPage";
 import Footer from "./components/Footer/Footer";
 import AdminPage from "./Pages/AdminPage";
 import AdminContextProvider from "./contexts/AdminContex";
+import AuthContextProvider from "./contexts/AuthContext";
 import NewsPage from "./Pages/NewsPage/NewsPage";
 
 const Routes = () => {
   return (
-    <AdminContextProvider>
-      <MainContextProvider>
-        <BrowserRouter>
-          <NavbarComp />
+    <AuthContextProvider>
+      <AdminContextProvider>
+        <MainContextProvider>
+          <BrowserRouter>
+            <NavbarComp />
 
-          <Switch>
-            <Route exact path="/" component={HomePage} />
-            <Route exact path="/admin" component={AdminPage} />
-            <Route exact path="/create" component={CreateCard} />
-            <Route exact path="/edit/:id" component={EditPage} />
+            <Switch>
+              <Route exact path="/" component={HomePage} />
+              <Route exact path="/admin" component={AdminPage} />
+              <Route exact path="/create" component={CreateCard} />
+              <Route exact path="/edit/:id" component={EditPage} />
 
-            <Route exact path="/sign-in" component={SignInPage} />
-            <Route exact path="/sign-up" component={SignUpPage} />
-            <Route exact path="/order" component={OrderPage} />
-            <Route exact path="/news" component={NewsPage} />
-            <Route exact path="/created" component={CatalogPage} />
-          </Switch>
-          <Footer />
-        </BrowserRouter>
-      </MainContextProvider>
-    </AdminContextProvider>
+              <Route exact path="/sign-in" component={SignInPage} />
+              <Route exact path="/sign-up" component={SignUpPage} />
+              <Route exact path="/order" component={OrderPage} />
+              <Route exact path="/news" component={NewsPage} />
+              <Route exact path="/created" component={CatalogPage} />
+            </Switch>
+            <Footer />
+          </BrowserRouter>
+        </MainContextProvider>
+      </AdminContextProvider>
+    </AuthContextProvider>
   );
 };
 

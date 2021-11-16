@@ -23,10 +23,18 @@
       "phoneNumber": 123456789,
       "password": "787878qw",
       "id": 3
+    },
+    {
+      "username": "234567890",
+      "lastName": "3456789",
+      "email": "pochtazare@gmail.com",
+      "phoneNumber": 34567890987865,
+      "password": "34567888fgu",
+      "id": 4
     }
   ],
   "products": [
-   {
+    {
       "name": "Elsa Moon Necklace",
       "price": "$20.14 USD",
       "details": "Materials: Gold Plated Brass, cubic zirconia, hypoallergenic",
@@ -74,6 +82,5 @@
       "details": "Materials: 14k gold plated sterling silver, cubic zirconia . Measurements: 15\"/380mm in length",
       "id": 8
     }
-
   ]
 }
