@@ -5,9 +5,11 @@ import { mainContext } from "../../contexts/MainContext";
 import Logo from "../Navbar/TAMLER.svg";
 import "./AddedCard.css";
 
-const AddedCard = () => {
+const AddedCard = (props) => {
   const { getProducts, products, deleteProduct, currentPosts } =
     useContext(mainContext);
+  const { addEndDeletePhoneCart, checkPhoneInCart } =
+    React.useContext(mainContext);
   const params = useParams();
   const history = useHistory();
   useEffect(() => {
@@ -22,9 +24,11 @@ const AddedCard = () => {
       <div className="container card-div ">
         {currentPosts.map((item) => (
           <Card className="card" key={item.id}>
-
             <Card.Body>
-              <img style={{ width: '200px', height: '300px' }} src={item.image} />
+              <img
+                style={{ width: "200px", height: "300px" }}
+                src={item.image}
+              />
 
               <Card.Title>Jewelry</Card.Title>
             </Card.Body>
@@ -32,7 +36,13 @@ const AddedCard = () => {
               <ListGroupItem className="inp">{item.name}</ListGroupItem>
               <ListGroupItem className="inp">{item.price}</ListGroupItem>
 
-              <ListGroupItem className="inp" style={{ height: "250px" }} color="red">{item.details}</ListGroupItem>
+              <ListGroupItem
+                className="inp"
+                style={{ height: "250px" }}
+                color="red"
+              >
+                {item.details}
+              </ListGroupItem>
             </ListGroup>
             <Card.Body>
               <Link to={`/edit/${item.id}`}>
@@ -47,6 +57,18 @@ const AddedCard = () => {
                 variant="outline-primary"
               >
                 Delete
+              </Button>
+              <Button
+                // onClick={() => deleteProduct(item.id)}
+                className="card-btn"
+                variant="outline-primary"
+                onClick={() => addEndDeletePhoneCart(props.item)}
+                size="small"
+              >
+                <i
+                  class="bi bi-bag-plus"
+                  color={checkPhoneInCart(item.id) ? "error" : "primary"}
+                ></i>
               </Button>
             </Card.Body>
           </Card>
