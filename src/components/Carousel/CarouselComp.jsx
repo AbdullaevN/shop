@@ -14,34 +14,21 @@ const CarouselComp = () => {
       <Carousel fade>
         <Carousel.Item>
           <hr />
-          <img
-            className="d-block w-100 h-100"
-            src={Vid}
-            alt="First slide"
-          ></img>
+          <img className="d-block" src={Vid} alt="First slide"></img>
 
-          <Carousel.Caption>
-
-          </Carousel.Caption>
+          <Carousel.Caption></Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img
-            className="d-block w-100 h-100"
-            src={slide3}
-            alt="Second slide"
-          />
+          <hr />
+          <img style={{objectFit: 'cover'}} className="d-block" src={slide3} alt="Second slide" />
 
-          <Carousel.Caption>
-
-          </Carousel.Caption>
+          <Carousel.Caption></Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img className="d-block w-100 h-100" src={slide4} alt="Third slide" />
+          <hr />
+          <img style={{objectFit: 'cover'}} className="d-block" src={slide4} alt="Third slide" />
 
-          <Carousel.Caption>
-
-
-          </Carousel.Caption>
+          <Carousel.Caption></Carousel.Caption>
         </Carousel.Item>
       </Carousel>
     </div>

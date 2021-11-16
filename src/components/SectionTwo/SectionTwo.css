@@ -6,9 +6,9 @@
 
 }
 
-.twoPics {
+/* .twoPics {
     background: linear-gradient(to right, rgba(246,248,249,1) 0%,rgba(229,235,238,1) 50%,rgba(215,222,227,1) 51%,rgba(245,247,249,1) 100%);
-}
+} */
 
 .pic1 img {
     width: 500px;
@@ -65,10 +65,10 @@
     border-bottom: 1px solid black;
 }
 
-.pic2 span:hover {
+/* .pic2 span:hover {
     color: rgba(255, 248, 226, 0.774);
     font-size: 26px;
-}
+} */
 
 .pic2 img{
    width: 620px;
@@ -118,10 +118,10 @@
     border-bottom: 1px solid wheat;
 }
 
-.pic3 span:hover {
+/* .pic3 span:hover {
     color: rgba(236, 189, 32, 0.774);
     font-size: 23px;
-}
+} */
 
 .pic4 {
     position: relative;
@@ -133,7 +133,7 @@
     left: 10%;
     font-size: 25px;
     font-weight: 600;
-    color: rgba(0, 0, 0, 0.973);
+    color: rgba(255, 255, 255, 0.973);
     border-bottom: 1px solid black;
 }
 

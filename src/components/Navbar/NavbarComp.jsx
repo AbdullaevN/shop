@@ -89,7 +89,7 @@ const HomePage = () => {
   }
 
   return (
-    <div className="main-nav mb-5">
+    <div className="main-nav mb-3">
       <Navbar className="navbar " bg="light" expand="lg">
         <Container fluid>
           <Navbar.Brand href="#"></Navbar.Brand>

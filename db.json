@@ -23,6 +23,30 @@
       "phoneNumber": 123456789,
       "password": "787878qw",
       "id": 3
+    },
+    {
+      "username": "China",
+      "lastName": "Kazymbaev",
+      "email": "kazymbaevaidar@gmail.com",
+      "phoneNumber": 709888470,
+      "password": "wwwwwwwwwwwwwwwww1",
+      "id": 4
+    },
+    {
+      "username": "13 PROOOO",
+      "lastName": "Kazymbaev",
+      "email": "kazymbaevaidar@gmail.com",
+      "phoneNumber": 709888470,
+      "password": "2222222222ss",
+      "id": 5
+    },
+    {
+      "username": "S22 Flip",
+      "lastName": "5213521352135",
+      "email": "kazymbaevaidar@gmail.com",
+      "phoneNumber": 709888470,
+      "password": "sssssssssssss1",
+      "id": 6
     }
   ],
   "products": [
