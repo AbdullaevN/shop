@@ -11,6 +11,7 @@ const CreateCard = () => {
     name: "",
     price: "",
     details: "",
+    image: '',
 
 
   });
