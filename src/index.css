@@ -43,3 +43,8 @@ code {
   display: flex;
   list-style-type: none;
 }
+.radio {
+  display: flex;
+  flex-direction: row;
+  background: rgb(199, 199, 199);
+}

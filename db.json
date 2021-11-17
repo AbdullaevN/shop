@@ -123,6 +123,14 @@
       "details": "hiuhiuh",
       "image": "llllll",
       "id": 15
+    },
+    {
+      "name": "LU",
+      "brand": "lu",
+      "price": 550,
+      "details": "shfeibfeub",
+      "image": "550",
+      "id": 16
     }
   ]
 }
