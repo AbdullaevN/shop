@@ -47,7 +47,9 @@ const Footer = () => {
             <Link to="/order">
               <a href="#">Доставка</a>
             </Link>
-            <a href="#">Оплата</a>
+            <Link to="/cart">
+              <a href="#">Оплата</a>
+            </Link>
             <a href="#">Возврат товара</a>
             <a href="#">Личный кабинет</a>
           </div>

@@ -13,10 +13,12 @@ import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
 
 const CartPage = () => {
-  const { getCart, cart, changeCountPhone } = React.useContext(mainContext);
+  const { getCart, cart, changeCountPhone, totalPrice } =
+    React.useContext(mainContext);
   React.useEffect(() => {
     getCart();
   }, []);
+  // console.log(cart.totalPrice);
 
   return (
     <>

@@ -46,32 +46,32 @@ const AddedCard = (props) => {
               </ListGroupItem>
             </ListGroup>
             <Card.Body>
-              <Link to={`/edit/${item.id}`}>
-                <Button className="card-btn" variant="outline-primary">
-                  Edit
-                </Button>
-              </Link>
-
-              <Button
-                onClick={() => deleteProduct(item.id)}
-                className="card-btn"
-                variant="outline-primary"
-              >
-                Delete
-              </Button>
               <Button
                 // onClick={() => deleteProduct(item.id)}
                 className="card-btn"
                 variant="outline-primary"
                 onClick={() => addEndDeletePhoneCart(item)}
                 size="small"
+                style={{ width: "50px", height: "40px" }}
                 //
               >
                 <ShoppingCartIcon
-                // color={
-                //   checkPhoneInCart(props.phones.id) ? "error" : "primary"
-                // }
+                  color={checkPhoneInCart(item.id) ? "error" : "primary"}
                 />
+              </Button>
+              <Button
+                // onClick={() => deleteProduct(item.id)}
+                className="card-btn"
+                style={{ width: "150px" }}
+                variant="outline-primary"
+                onClick={() => addEndDeletePhoneCart(item)}
+                size="small"
+                //
+              >
+                {/* <ShoppingCartIcon
+                  color={checkPhoneInCart(item.id) ? "error" : "primary"}
+                /> */}
+                Show more...
               </Button>
             </Card.Body>
           </Card>

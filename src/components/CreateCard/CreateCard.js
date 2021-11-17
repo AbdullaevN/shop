@@ -11,9 +11,7 @@ const CreateCard = () => {
     name: "",
     price: "",
     details: "",
-    image: '',
-
-
+    image: "",
   });
 
   const data = useContext(mainContext);
@@ -24,8 +22,7 @@ const CreateCard = () => {
     name: yup.string().min(2).max(30).required("Required"),
     price: yup.string().min(2).max(30).required("Required"),
     details: yup.string().min(4).max(1000).required("Required"),
-    image: yup.string().required('required')
-
+    image: yup.string().required("required"),
   });
   return (
     <div>
@@ -41,8 +38,7 @@ const CreateCard = () => {
             price: "",
 
             details: "",
-            image: ''
-
+            image: "",
           }}
         >
           {({ handleSubmit, handleChange, values, touched, errors }) => (
@@ -78,7 +74,7 @@ const CreateCard = () => {
                 <Form.Control
                   name="price"
                   onChange={handleChange}
-                  type="text"
+                  type="number"
                   placeholder="enter price"
                   isValid={!errors.price && touched.price}
                   isInvalid={!!errors.price}
@@ -98,8 +94,6 @@ const CreateCard = () => {
                   value={values.image}
                 />
               </Form.Group>
-
-
 
               <Button variant="primary" type="submit">
                 Submit
