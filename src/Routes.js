@@ -15,8 +15,8 @@ import AdminPage from "./Pages/AdminPage";
 import AdminContextProvider from "./contexts/AdminContex";
 import AuthContextProvider from "./contexts/AuthContext";
 import NewsPage from "./Pages/NewsPage/NewsPage";
-import ContactPage from "./Pages/ContactPage";
-import CartPage from "./Pages/CartPage";
+import ContactPage from "./Pages/ContactPage"
+import CartPage from "./Pages/CartPage"
 import CreditCardPage from "./Pages/CreditCard/CreditCardPage";
 
 const Routes = () => {
