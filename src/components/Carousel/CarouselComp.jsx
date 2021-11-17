@@ -10,7 +10,7 @@ import Vid from "./photos/vid.gif";
 
 const CarouselComp = () => {
   return (
-    <div>
+    <div className='caruselka'>
       <Carousel fade>
         <Carousel.Item>
           <hr />

@@ -17,6 +17,7 @@ import AuthContextProvider from "./contexts/AuthContext";
 import NewsPage from "./Pages/NewsPage/NewsPage";
 import ContactPage from "./Pages/ContactPage"
 import CartPage from "./Pages/CartPage"
+import CreditCardPage from "./Pages/CreditCard/CreditCardPage";
 
 const Routes = () => {
   return (
@@ -39,6 +40,7 @@ const Routes = () => {
               <Route exact path="/cart" component={CartPage} />
               <Route exact path="/created" component={CatalogPage} />
               <Route exct path="/contacts" component={ContactPage} />
+              <Route exct path="/credit/card" component={CreditCardPage} />
             </Switch>
             <Footer />
           </BrowserRouter>

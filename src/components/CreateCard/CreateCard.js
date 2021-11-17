@@ -86,7 +86,7 @@ const CreateCard = () => {
                 />
               </Form.Group>
 
-              <Form.Group className="mb-3" controlId="formBasicPassword">
+              <Form.Group className="mb-3 image" controlId="formBasicPassword">
                 <Form.Label>Price product</Form.Label>
                 <Form.Control
                   name="image"
