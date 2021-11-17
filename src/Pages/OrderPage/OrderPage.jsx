@@ -12,8 +12,8 @@ const OrderPage = () => {
           </p>
           <span>
             | Ежедневно 10:00-20:00 | <br />{" "}
-            <a href="#">kazymbaevaidar@gmail.com</a> <br />{" "}
-            <a href="#">kazymbaevaidar@gmail.com</a>
+            <a href="https://mail.google.com/mail/u/0/?pli=1#inbox">kazymbaevaidar@gmail.com</a> <br />{" "}
+            <a href="https://mail.google.com/mail/u/1/#inbox?compose=CllgCKHRtbDWpPspljlTczkxkhTQRWnmMMBHMHSTPhrmHxnCgtQQrlgMPnpkSLtckDJLzljjWqB">pochtazare@gmail.com</a>
           </span>
         </div>
 
