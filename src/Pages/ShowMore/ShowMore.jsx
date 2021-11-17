@@ -22,8 +22,8 @@ const ShowMore = () => {
           <div>
             <h2>{phoneDetails.name}</h2>
             <p>{phoneDetails.details}</p>
-            <Button variant="contained" color="primary">
-              Добавить в корзину
+            <Button variant="outlined" color="secondary">
+              Добавить в корзину                                         
             </Button>
             <div>
               <h4>Описание:</h4>
