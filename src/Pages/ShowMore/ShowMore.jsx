@@ -12,6 +12,7 @@ const ShowMore = () => {
     getDetails(params.id);
   }, []);
   console.log(phoneDetails);
+  //test
   return (
     <div className='mainShowMore'>
       {phoneDetails ? (
