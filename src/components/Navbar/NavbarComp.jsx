@@ -48,7 +48,7 @@ const HomePage = () => {
     }
   }
   useEffect(() => setuser(), [struser]);
-  console.log(user, "user");
+  // console.log(user, "user");
   if (user) {
     let struser = JSON.stringify(user);
     localStorage.setItem("user", struser);
@@ -65,10 +65,10 @@ const HomePage = () => {
         <Button
           className=""
           style={{ height: "30px" }}
-          variant="primary"
+          variant="outline-success"
           onClick={() => logOut()}
         >
-          <i class="bi bi-box-arrow-right "></i>
+          <i class="bi bi-door-closed"></i>
         </Button>
       </>
     );
@@ -167,7 +167,7 @@ const HomePage = () => {
                 </Button>
               </Link>
             </Form>
-            <Link to="/sign-in" className="">
+            {/* <Link to="/sign-in" className="">
               <Button className="for-font sign" variant="outline-success">
                 Sign In
               </Button>
@@ -176,7 +176,7 @@ const HomePage = () => {
               <Button className="for-font sign" variant="outline-success">
                 Sign Up
               </Button>
-            </Link>
+            </Link> */}
             {/* <Link to="/cart" className="">
               <Button className="for-font sign" variant="outline-success">
                 <i class="bi bi-cart2"></i>

@@ -4,6 +4,7 @@ import { Link, useParams, useHistory } from "react-router-dom";
 import { mainContext } from "../../contexts/MainContext";
 import Logo from "../Navbar/TAMLER.svg";
 import "./AddedCard.css";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 const AddedCard = (props) => {
   const { getProducts, products, deleteProduct, currentPosts } =
@@ -62,13 +63,15 @@ const AddedCard = (props) => {
                 // onClick={() => deleteProduct(item.id)}
                 className="card-btn"
                 variant="outline-primary"
-                onClick={() => addEndDeletePhoneCart(props.item)}
+                onClick={() => addEndDeletePhoneCart(item)}
                 size="small"
+                //
               >
-                <i
-                  class="bi bi-bag-plus"
-                  color={checkPhoneInCart(item.id) ? "error" : "primary"}
-                ></i>
+                <ShoppingCartIcon
+                // color={
+                //   checkPhoneInCart(props.phones.id) ? "error" : "primary"
+                // }
+                />
               </Button>
             </Card.Body>
           </Card>
