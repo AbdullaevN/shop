@@ -59,20 +59,11 @@ const AddedCard = (props) => {
                   color={checkPhoneInCart(item.id) ? "error" : "primary"}
                 />
               </Button>
-              <Button
-                // onClick={() => deleteProduct(item.id)}
-                className="card-btn"
-                style={{ width: "150px" }}
-                variant="outline-primary"
-                onClick={() => addEndDeletePhoneCart(item)}
-                size="small"
-                //
-              >
-                {/* <ShoppingCartIcon
-                  color={checkPhoneInCart(item.id) ? "error" : "primary"}
-                /> */}
-                Show more...
-              </Button>
+              <Link to={`/showmore/${item.id}`}>
+                <Button size="small" variant="contained">
+                  Подробнее
+                </Button>
+              </Link>
             </Card.Body>
           </Card>
         ))}

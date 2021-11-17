@@ -116,19 +116,6 @@ const HomePage = () => {
                   Order
                 </Link>
               </Nav.Link>
-
-              {/* <NavDropdown title="Link" id="navbarScrollingDropdown">
-                <NavDropdown.Item className="for-font" href="#action3">
-                  Action
-                </NavDropdown.Item>
-                <NavDropdown.Item className="for-font" href="#action4">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item className="for-font" href="#action5">
-                  Something else here
-                </NavDropdown.Item>
-              </NavDropdown> */}
               <Nav.Link className="for-font" href="#">
                 <Link
                   style={{ textDecoration: "none", color: "black" }}
@@ -188,7 +175,7 @@ const HomePage = () => {
                 aria-label="show 4 new mails"
                 color="inherit"
               >
-                <Badge badgeContent={phonesCountInCart} color="error">
+                <Badge badgecontent={phonesCountInCart} color="error">
                   <ShoppingCartIcon />
                 </Badge>
               </IconButton>

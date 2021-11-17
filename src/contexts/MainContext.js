@@ -7,6 +7,7 @@ export const mainContext = React.createContext();
 const INIT_STATE = {
   products: null,
   productEdit: null,
+  phoneDetails: null,
   phonesCountInCart: JSON.parse(localStorage.getItem("cart"))
     ? JSON.parse(localStorage.getItem("cart")).phones.length
     : 0,
@@ -17,6 +18,8 @@ const reducer = (state = INIT_STATE, action) => {
   switch (action.type) {
     case "GET_PRODUCTS":
       return { ...state, products: action.payload };
+    case "GET_DETAILS":
+      return { ...state, phoneDetails: action.payload };
     case "GET_PRODUCTS_TO_EDIT":
       return { ...state, productEdit: action.payload };
     case "CLEAR_PRODUCT_EDIT":
@@ -25,6 +28,7 @@ const reducer = (state = INIT_STATE, action) => {
       return { ...state, phonesCountInCart: action.payload };
     case "GET_CART":
       return { ...state, cart: action.payload };
+
     default:
       return state;
   }
@@ -89,6 +93,21 @@ const MainContextProvider = (props) => {
       );
       console.log(response);
       getProducts();
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  //! Для страницы деталей
+  const getDetails = async (id) => {
+    try {
+      console.log(`${API}${id}`);
+      const response = await axios(`${API}${id}`);
+      let action = {
+        type: "GET_DETAILS",
+        payload: response.data,
+      };
+      dispatch(action);
     } catch (e) {
       console.log(e);
     }
@@ -213,6 +232,7 @@ const MainContextProvider = (props) => {
     localStorage.setItem("cart", JSON.stringify(cart));
     getCart();
   };
+
   return (
     <mainContext.Provider
       value={{
@@ -225,6 +245,8 @@ const MainContextProvider = (props) => {
         //
         handlePage,
         //
+        getDetails: getDetails,
+        //
         addEndDeletePhoneCart,
         checkPhoneInCart,
         getCart,
@@ -232,6 +254,8 @@ const MainContextProvider = (props) => {
         //
         products: state.products,
         productEdit: state.productEdit,
+        //
+        phoneDetails: state.phoneDetails,
 
         //
         totalPosts: totalPosts,
