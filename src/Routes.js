@@ -40,9 +40,9 @@ const Routes = () => {
               <Route exact path="/news" component={NewsPage} />
               <Route exact path="/cart" component={CartPage} />
               <Route exact path="/created" component={CatalogPage} />
-              <Route exct path="/contacts" component={ContactPage} />
-              <Route exct path="/credit/card" component={CreditCardPage} />
-              <Route exct path="/showmore/:id" component={ShowMore} />
+              <Route exact path="/contacts" component={ContactPage} />
+              <Route exact path="/credit/card" component={CreditCardPage} />
+              <Route exact path="/showmore/:id" component={ShowMore} />
             </Switch>
             <Footer />
           </BrowserRouter>

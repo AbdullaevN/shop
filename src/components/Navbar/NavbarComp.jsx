@@ -148,11 +148,6 @@ const HomePage = () => {
                 aria-label="Search"
               />
               {button}
-              <Link to="/create" className="">
-                <Button className="for-font" variant="outline-success">
-                  Add
-                </Button>
-              </Link>
             </Form>
             {/* <Link to="/sign-in" className="">
               <Button className="for-font sign" variant="outline-success">
