@@ -19,11 +19,11 @@ const EditPage = () => {
     name: yup.string().min(2).max(30).required("Required"),
     price: yup.string().min(2).max(30).required("Required"),
     details: yup.string().min(4).max(1000).required("Required"),
-    image: yup.string().required('required')
-
+    image: yup.string().required("required"),
   });
 
   const params = useParams();
+  console.log(params);
   useEffect(() => {
     clearProductEdit();
   }, []);
@@ -98,8 +98,6 @@ const EditPage = () => {
                       value={values.image}
                     />
                   </Form.Group>
-
-
 
                   <Button variant="primary" type="submit">
                     Submit
