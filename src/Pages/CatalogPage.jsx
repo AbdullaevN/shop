@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import AddedCard from "../components/AddedCard/AddedCard";
+// import FilterBar from "../components/Filter/FilterBar";
 import Pagination from "../components/Pagination/Pagination";
 import { mainContext } from "../contexts/MainContext";
 
@@ -15,6 +16,7 @@ const CatalogPage = () => {
           products.length ? (
             //
             <>
+              {/* <FilterBar /> */}
               <AddedCard />
               <div></div>
             </>
