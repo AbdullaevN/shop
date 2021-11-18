@@ -5,7 +5,7 @@ import { mainContext } from "../../contexts/MainContext";
 import Logo from "../Navbar/TAMLER.svg";
 import "./AddedCard.css";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import FavoriteIcon from "@mui/icons-material/Favorite";
+// import FavoriteIcon from "@mui/icons-material/Favorite";
 
 const AddedCard = (props) => {
   const { getProducts, products, deleteProduct, currentPosts } =
@@ -32,7 +32,7 @@ const AddedCard = (props) => {
           <Card className="card" key={item.id}>
             <Card.Body>
               <img
-                style={{ width: "200px", height: "300px" }}
+                style={{ width: "200px", height: "230px" }}
                 src={item.image}
               />
 
@@ -59,13 +59,13 @@ const AddedCard = (props) => {
                 onClick={() => addEndDeletePhoneCart(item)}
                 size="small"
                 style={{ width: "50px", height: "40px" }}
-                //
+              //
               >
                 <ShoppingCartIcon
                   color={checkPhoneInCart(item.id) ? "error" : "primary"}
                 />
               </Button>
-              <Button
+              {/* <Button
                 size="small"
                 variant="outlined"
                 onClick={() => addAndDeleteProductInFavorites(item)}
@@ -75,7 +75,7 @@ const AddedCard = (props) => {
                     checkFavoriteInFavorites(item.id) ? "error" : "primary"
                   }
                 />
-              </Button>
+              </Button> */}
               <Link to={`/showmore/${item.id}`}>
                 <Button size="small" variant="contained">
                   Подробнее
