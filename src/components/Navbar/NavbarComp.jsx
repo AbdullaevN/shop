@@ -75,15 +75,16 @@ const HomePage = () => {
       </Link>
     );
   }
-  let temp1;
-  let gg = <SignGoogle />;
-  if (gg) {
-    temp1 = (
-      <Link to="/admin">
-        <Button variant="contained">Admin</Button>
-      </Link>
-    );
-  }
+  // let temp1;
+  // let gg = <SignGoogle />;
+  // if (gg) {
+  //   temp1 = (
+  //     <Link to="/admin">
+  //       <Button variant="contained">Admin</Button>
+  //     </Link>
+  //   );
+  // }
+  console.log(user);
   return (
     <div className="main-nav mb-3">
       <Navbar className="navbar " bg="light" expand="lg">
@@ -138,9 +139,13 @@ const HomePage = () => {
                 aria-label="Search"
               />
             </Form>
+            {/* {user ? user.displayName : <></>} */}
             {user ? temp : <></>}
-            {<SignGoogle /> ? temp1 : <></>}
-            <Link to="/sign-in" className="">
+            <div style={{ margin: "5px" }}>
+              <SignGoogle />
+            </div>
+            {/* {<SignGoogle /> ? temp1 : <></>} */}
+            {/* <Link to="/sign-in" className="">
               <Button
                 className="for-font sign"
                 variant="outline-success"
@@ -171,9 +176,9 @@ const HomePage = () => {
               >
                 Sign Up
               </Button>
-            </Link>
+            </Link> */}
 
-            <IconButton
+            {/* <IconButton
               size="large"
               aria-label="show 17 new notifications"
               color="inherit"
@@ -186,7 +191,7 @@ const HomePage = () => {
                   }}
                 />
               </Badge>
-            </IconButton>
+            </IconButton> */}
             {/* <Link to="/cart" className="">
               <Button className="for-font sign" variant="outline-success">
                 <i class="bi bi-cart2"></i>
