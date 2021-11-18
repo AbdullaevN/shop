@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 import * as yup from "yup";
+import SignGoogle from "../components/SignGoogle/SignGoogle";
 import { adminContext } from "../contexts/AdminContex";
 
 const SignInPage = (props) => {
@@ -82,6 +83,17 @@ const SignInPage = (props) => {
               <Button variant="primary" type="submit">
                 Submit
               </Button>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  // width: "350px",
+                  height: " 80px",
+                  margin: "10px",
+                }}
+              >
+                <SignGoogle />
+              </div>
             </Form>
           )}
         </Formik>

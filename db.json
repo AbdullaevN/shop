@@ -4,119 +4,12 @@
       "username": "Nurlan",
       "lastName": "Abdullaev",
       "email": "nurlanabdullaev9820@gmail.com",
-      "phoneNumber": 234567890,
-      "password": "78454555s",
+      "phoneNumber": 559113371,
+      "password": "qwerty12",
       "id": 1
-    },
-    {
-      "username": "aidaaaarov",
-      "lastName": "Kazymbaevvvvv",
-      "email": "kazymbaevaidar@gmail.com",
-      "phoneNumber": 709888470,
-      "password": "alenaaaaaaaa11",
-      "id": 2
-    },
-    {
-      "username": "nurlann",
-      "lastName": "nno",
-      "email": "nurlanabdullaev9820@gmail.com",
-      "phoneNumber": 123456789,
-      "password": "787878qw",
-      "id": 3
     }
   ],
   "products": [
-    {
-      "name": "Elsa Moon Necklace",
-      "price": 20,
-      "details": "Materials: Gold Plated Brass, cubic zirconia, hypoallergenic",
-      "id": 1,
-      "image": "https://light-catchers.ru/wp-content/uploads/2021/04/img_3523_1.jpeg"
-    },
-    {
-      "name": "Gold Chunky Hoop Earrings",
-      "price": 30,
-      "details": "18K PVD Gold Plated Stainless Steel Base Hinged Top Closure Hoop Width: 2.9 cm Hypoallergenic Tarnish Resistant Includes soft cloth for cleaning after use Delivered in a custom Dos Nueve Studio jewelry box ",
-      "id": 2,
-      "image": "https://light-catchers.ru/wp-content/uploads/2019/05/IMG_3696.jpg"
-    },
-    {
-      "name": "Jael Circle Crystal Gold Ring",
-      "price": 22,
-      "details": "Ring Gold Tone Alloy Ring Size: 5, 6, 7, 8, 9",
-      "id": 4,
-      "image": "https://light-catchers.ru/wp-content/uploads/2021/04/retush-ruk_2.jpeg"
-    },
-    {
-      "name": "V-Necklace - Vida",
-      "price": 10,
-      "details": " 14K Gold   Cubic Zirconia, 14K Gold on Recycled Sterling Silver  380mm - 15\", 50mm - 2\"",
-      "id": 5,
-      "image": "https://light-catchers.ru/wp-content/uploads/2019/06/KN-79-9.jpg"
-    },
-    {
-      "name": " Yuri Necklace",
-      "price": 26,
-      "details": "Materials: 18k gold plated sterling silver, cubic zirconia stone",
-      "id": 6,
-      "image": "https://light-catchers.ru/wp-content/uploads/2019/06/KN-39-1.jpg"
-    },
-    {
-      "name": "Mucho Twirl Midi Ring",
-      "price": 24,
-      "details": "Delicate ring with twisted design. Perfect for daily wear and stacking.Materials: gold plated sterling silver",
-      "id": 7,
-      "image": "https://light-catchers.ru/wp-content/uploads/2020/09/sd_0c543611_04-scaled.jpg"
-    },
-    {
-      "name": " Francine Necklace",
-      "price": 24,
-      "details": "Materials: 14k gold plated sterling silver, cubic zirconia . Measurements: 15\"/380mm in length",
-      "id": 8,
-      "image": "https://light-catchers.ru/wp-content/uploads/2020/09/sd_2c149511_04.jpg"
-    },
-    {
-      "name": "Gold Garnet Anklet",
-      "price": 25,
-      "details": "Material: Gold steel. Sizes options: Small: 8-10\" Medium: 9-11\" Large: 10-12\"",
-      "id": 9,
-      "image": "https://light-catchers.ru/wp-content/uploads/2020/09/sd_0e223123_04.jpg"
-    },
-    {
-      "name": "Gold Garnet Anklet",
-      "price": 25,
-      "details": "Sizes options: Small: 8-10\" Medium: 9-11\" Large: 10-12\" Material: Gold steel",
-      "id": 10,
-      "image": "https://light-catchers.ru/wp-content/uploads/2020/09/sd_1m318125_04.jpg"
-    },
-    {
-      "name": "Gold Garnet Anklet",
-      "price": 25,
-      "details": "Materials: Gold Plated Brass, cubic zirconia, hypoallergenic",
-      "id": 11,
-      "image": "https://light-catchers.ru/wp-content/uploads/2019/06/2018-04-12-20-24.jpg"
-    },
-    {
-      "name": "qwerty",
-      "price": 200,
-      "details": "123456",
-      "id": 12,
-      "image": "https://light-catchers.ru/wp-content/uploads/2019/06/2018-04-12-18-25-56.jpg"
-    },
-    {
-      "name": "nurlan",
-      "price": 550,
-      "details": "5454dg",
-      "image": "https://light-catchers.ru/wp-content/uploads/2021/06/furs8425.jpeg",
-      "id": 13
-    },
-    {
-      "name": "nurlan",
-      "price": 10,
-      "details": "jyguyguy",
-      "image": "tfyvy",
-      "id": 14
-    },
     {
       "name": "VIDA",
       "price": 500,
@@ -131,6 +24,14 @@
       "details": "shfeibfeub",
       "image": "550",
       "id": 16
+    },
+    {
+      "name": "vu",
+      "brand": "vu",
+      "price": 120,
+      "details": "hjhkwhiinoi",
+      "image": "https://light-catchers.ru/wp-content/uploads/2021/04/img_3523_1.jpeg",
+      "id": 17
     }
   ]
 }

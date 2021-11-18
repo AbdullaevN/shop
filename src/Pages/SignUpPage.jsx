@@ -1,10 +1,17 @@
 import React, { useContext } from "react";
-import { Form, Button } from "react-bootstrap";
+import { Form, Button, Navbar, Badge } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 import "../index.css";
 import * as yup from "yup";
 import { Formik } from "formik";
 import { adminContext } from "../contexts/AdminContex";
+import { authContext } from "../contexts/AuthContext";
+import IconButton from "@mui/material/IconButton";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import LoginIcon from "@mui/icons-material/Login";
+import LogoutIcon from "@mui/icons-material/Logout";
+import { mainContext } from "../contexts/MainContext";
+import SignGoogle from "../components/SignGoogle/SignGoogle";
 
 const SignUpPage = () => {
   const { signUpUser } = React.useContext(adminContext);
@@ -36,6 +43,17 @@ const SignUpPage = () => {
   }
   function handleCloseSubmit() {}
   console.log(handleSignup);
+
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+
+  //
+
   return (
     <div className="signup">
       <Formik
@@ -134,6 +152,17 @@ const SignUpPage = () => {
             <Button variant="primary" type="submit">
               Submit
             </Button>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                // width: "350px",
+                height: " 80px",
+                margin: "10px",
+              }}
+            >
+              <SignGoogle />
+            </div>
           </Form>
         )}
       </Formik>
