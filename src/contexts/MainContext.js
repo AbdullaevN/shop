@@ -102,7 +102,7 @@ const MainContextProvider = (props) => {
   const getDetails = async (id) => {
     try {
       console.log(`${API}${id}`);
-      const response = await axios(`${API}${id}`);
+      const response = await axios(`${API}/${id}`);
       let action = {
         type: "GET_DETAILS",
         payload: response.data,

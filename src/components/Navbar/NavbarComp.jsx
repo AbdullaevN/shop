@@ -138,65 +138,9 @@ const HomePage = () => {
                 className="me-2 justify-content-center"
                 aria-label="Search"
               />
-            </Form>
-            {/* {user ? user.displayName : <></>} */}
             {user ? temp : <></>}
-            <div style={{ margin: "5px" }}>
               <SignGoogle />
-            </div>
-            {/* {<SignGoogle /> ? temp1 : <></>} */}
-            {/* <Link to="/sign-in" className="">
-              <Button
-                className="for-font sign"
-                variant="outline-success"
-                style={{
-                  height: " 40px",
-                  width: "60px",
-                  fontSize: "12px",
-                  display: "flex",
-                  alignItems: "center",
-                  textDecoration: "none",
-                }}
-              >
-                Sign In
-              </Button>
-            </Link>
-            <Link to="/sign-up" className="">
-              <Button
-                className="for-font sign"
-                variant="outline-success"
-                style={{
-                  height: " 40px",
-                  width: "60px",
-                  fontSize: "12px",
-                  display: "flex",
-                  alignItems: "center",
-                  textDecoration: "none",
-                }}
-              >
-                Sign Up
-              </Button>
-            </Link> */}
-
-            {/* <IconButton
-              size="large"
-              aria-label="show 17 new notifications"
-              color="inherit"
-            >
-              <Badge badgeContent={productsCountInFavorites} color="primary">
-                <FavoriteIcon
-                  onClick={() => {
-                    handleOpen();
-                    getFavorite();
-                  }}
-                />
-              </Badge>
-            </IconButton> */}
-            {/* <Link to="/cart" className="">
-              <Button className="for-font sign" variant="outline-success">
-                <i class="bi bi-cart2"></i>
-              </Button>
-            </Link> */}
+  
             <Link to="/cart">
               <IconButton
                 size="large"
@@ -213,6 +157,8 @@ const HomePage = () => {
               handleCloseFavorite={handleCloseFavorite}
               handleOpen={handleOpen}
             />
+            </Form>
+
           </Navbar.Collapse>
         </Container>
       </Navbar>
