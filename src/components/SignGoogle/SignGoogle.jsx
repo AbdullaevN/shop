@@ -46,20 +46,18 @@ const SignGoogle = () => {
     button = (
       <>
         <Navbar.Collapse
-          className="justify-content-end me-2 navbar"
-          style={{ maxWidth: "100px" }}
+          className=" navbar"
+          // style={{width: '390px'}}
         >
-          <Navbar.Text>
+          <Navbar.Text style={{display:'flex', flexDirection: 'column'}}>
             Signed in as: <Badge bg="secondary">{user.displayName}</Badge>
-          </Navbar.Text>
           {user ? (
             user.email === "nurlanabdullaev9820@gmail.com" ? (
               <Link to="/admin">
-                <button>Войти как админ</button>
+                <button>Aдмин</button>
               </Link>
             ) : null
           ) : null}
-        </Navbar.Collapse>
         <Button
           className=""
           style={{
@@ -75,6 +73,9 @@ const SignGoogle = () => {
           {/* <h2>Sign with google</h2> */}
           {/* <LoginIcon /> */}
         </Button>
+          </Navbar.Text>
+
+        </Navbar.Collapse>
       </>
     );
   } else {

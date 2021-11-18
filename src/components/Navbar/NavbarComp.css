@@ -18,8 +18,33 @@
   top: 10%;
 }
 
+@media all and (max-width: 1000px) {
+  .navbar img {
+    height: 50px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 10%;
+    top: 10%;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .navbar img {
+    height: 50px;
+    width: 105px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 3%;
+    top: 10%;
+  }
+}
+
 .for-font {
-  /* font-family: "Advent Pro", sans-serif; */
   font-family: "Nanum Gothic", sans-serif;
   text-decoration: none;
   color: black;
