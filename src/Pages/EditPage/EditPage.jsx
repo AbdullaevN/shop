@@ -4,6 +4,7 @@ import { Link, useHistory, useParams } from "react-router-dom";
 import { mainContext } from "../../contexts/MainContext";
 import * as yup from "yup";
 import { Formik } from "formik";
+import '././EditPage.css'
 
 const EditPage = () => {
   const data = useContext(mainContext);
@@ -17,13 +18,14 @@ const EditPage = () => {
   const history = useHistory();
   const schema = yup.object().shape({
     name: yup.string().min(2).max(30).required("Required"),
+    brand: yup.string().min(2).max(30).required("Required"),
     price: yup.string().min(2).max(30).required("Required"),
     details: yup.string().min(4).max(1000).required("Required"),
-    image: yup.string().required('required')
-
+    image: yup.string().required("required"),
   });
 
   const params = useParams();
+  console.log(params);
   useEffect(() => {
     clearProductEdit();
   }, []);
@@ -36,7 +38,7 @@ const EditPage = () => {
     <div>
       <h1>EDIT PAGE</h1>
       <div>
-        <div>
+        <div className='main-edit'>
           {productEdit ? (
             <Formik
               validationSchema={schema}
@@ -58,6 +60,18 @@ const EditPage = () => {
                       isValid={!errors.name && touched.name}
                       isInvalid={!!errors.name}
                       value={values.name}
+                    />
+                  </Form.Group>
+                  <Form.Group className="mb-3" controlId="formBasicText">
+                    <Form.Label>Brand</Form.Label>
+                    <Form.Control
+                      name="brand"
+                      onChange={handleChange}
+                      type="text"
+                      placeholder="Enter brand"
+                      isValid={!errors.brand && touched.brand}
+                      isInvalid={!!errors.brand}
+                      value={values.brand}
                     />
                   </Form.Group>
 
@@ -98,8 +112,6 @@ const EditPage = () => {
                       value={values.image}
                     />
                   </Form.Group>
-
-
 
                   <Button variant="primary" type="submit">
                     Submit

@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import AddedCard from "../components/AddedCard/AddedCard";
+import FilterBar from "../components/Filter/FilterBar";
 import Pagination from "../components/Pagination/Pagination";
 import { mainContext } from "../contexts/MainContext";
 
@@ -10,7 +11,8 @@ const CatalogPage = () => {
   }, []);
   return (
     <>
-      <div>
+      <div className="blocks">
+        <FilterBar className="filter" />
         {products ? (
           products.length ? (
             //

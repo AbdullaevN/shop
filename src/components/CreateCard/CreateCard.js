@@ -9,11 +9,10 @@ import "./CreatedCard.css";
 const CreateCard = () => {
   const [product, setProduct] = useState({
     name: "",
+    brand: "",
     price: "",
     details: "",
-    image: '',
-
-
+    image: "",
   });
 
   const data = useContext(mainContext);
@@ -22,10 +21,10 @@ const CreateCard = () => {
 
   const schema = yup.object().shape({
     name: yup.string().min(2).max(30).required("Required"),
+    brand: yup.string().min(2).max(30).required("Required"),
     price: yup.string().min(2).max(30).required("Required"),
     details: yup.string().min(4).max(1000).required("Required"),
-    image: yup.string().required('required')
-
+    image: yup.string().required("required"),
   });
   return (
     <div>
@@ -38,15 +37,15 @@ const CreateCard = () => {
           }}
           initialValues={{
             name: "",
+            brand: "",
             price: "",
 
             details: "",
-            image: ''
-
+            image: "",
           }}
         >
           {({ handleSubmit, handleChange, values, touched, errors }) => (
-            <Form onSubmit={handleSubmit} className=" container divka col-3">
+            <Form onSubmit={handleSubmit} className=" container divka col-3" style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
               <Form.Group className="mb-3" controlId="formBasicText">
                 <Form.Label>Name</Form.Label>
                 <Form.Control
@@ -57,6 +56,18 @@ const CreateCard = () => {
                   isValid={!errors.name && touched.name}
                   isInvalid={!!errors.name}
                   value={values.name}
+                />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicText">
+                <Form.Label>Brand</Form.Label>
+                <Form.Control
+                  name="brand"
+                  onChange={handleChange}
+                  type="text"
+                  placeholder="Enter brand"
+                  isValid={!errors.brand && touched.brand}
+                  isInvalid={!!errors.brand}
+                  value={values.brand}
                 />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -78,7 +89,7 @@ const CreateCard = () => {
                 <Form.Control
                   name="price"
                   onChange={handleChange}
-                  type="text"
+                  type="number"
                   placeholder="enter price"
                   isValid={!errors.price && touched.price}
                   isInvalid={!!errors.price}
@@ -86,7 +97,7 @@ const CreateCard = () => {
                 />
               </Form.Group>
 
-              <Form.Group className="mb-3" controlId="formBasicPassword">
+              <Form.Group className="mb-3 image" controlId="formBasicPassword">
                 <Form.Label>Price product</Form.Label>
                 <Form.Control
                   name="image"
@@ -98,8 +109,6 @@ const CreateCard = () => {
                   value={values.image}
                 />
               </Form.Group>
-
-
 
               <Button variant="primary" type="submit">
                 Submit

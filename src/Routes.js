@@ -15,17 +15,24 @@ import AdminPage from "./Pages/AdminPage";
 import AdminContextProvider from "./contexts/AdminContex";
 import AuthContextProvider from "./contexts/AuthContext";
 import NewsPage from "./Pages/NewsPage/NewsPage";
-import ContactPage from "./Pages/ContactPage"
-import CartPage from "./Pages/CartPage"
+
+import ContactPage from "./Pages/ContactPage";
+import CartPage from "./Pages/CartPage";
+import CreditCardPage from "./Pages/CreditCard/CreditCardPage";
+import ShowMore from "./Pages/ShowMore/ShowMore";
+import Navibar from "./components/Navbar/Navibar";
+// import ClientContextProvider from "./contexts/ClientContext";
 
 const Routes = () => {
   return (
+    // <ClientContextProvider>
     <AuthContextProvider>
       <AdminContextProvider>
         <MainContextProvider>
           <BrowserRouter>
             <NavbarComp />
             {/* test */}
+
             <Switch>
               <Route exact path="/" component={HomePage} />
               <Route exact path="/admin" component={AdminPage} />
@@ -38,13 +45,16 @@ const Routes = () => {
               <Route exact path="/news" component={NewsPage} />
               <Route exact path="/cart" component={CartPage} />
               <Route exact path="/created" component={CatalogPage} />
-              <Route exct path="/contacts" component={ContactPage} />
+              <Route exact path="/contacts" component={ContactPage} />
+              <Route exact path="/credit/card" component={CreditCardPage} />
+              <Route exact path="/showmore/:id" component={ShowMore} />
             </Switch>
             <Footer />
           </BrowserRouter>
         </MainContextProvider>
       </AdminContextProvider>
     </AuthContextProvider>
+    // </ClientContextProvider>
   );
 };
 

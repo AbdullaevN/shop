@@ -10,23 +10,33 @@ import Vid from "./photos/vid.gif";
 
 const CarouselComp = () => {
   return (
-    <div>
+    <div className="caruselka">
       <Carousel fade>
         <Carousel.Item>
           <hr />
-          <img className="d-block" src={Vid} alt="First slide"></img>
+          {/* <img className="d-block" src={Vid} alt="First slide"></img> */}
 
           <Carousel.Caption></Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <hr />
-          <img style={{objectFit: 'cover'}} className="d-block" src={slide3} alt="Second slide" />
+          <img
+            style={{ objectFit: "cover" }}
+            className="d-block"
+            src={slide3}
+            alt="Second slide"
+          />
 
           <Carousel.Caption></Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <hr />
-          <img style={{objectFit: 'cover'}} className="d-block" src={slide4} alt="Third slide" />
+          <img
+            style={{ objectFit: "cover" }}
+            className="d-block"
+            src={slide4}
+            alt="Third slide"
+          />
 
           <Carousel.Caption></Carousel.Caption>
         </Carousel.Item>

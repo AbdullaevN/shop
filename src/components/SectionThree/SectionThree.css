@@ -26,3 +26,9 @@ h3 {
 .btn:hover {
     background: rgb(154, 143, 228);
 }
+
+@media all and (max-width: 570px) {
+    .blockTwo img {
+        display: none;
+    }
+}

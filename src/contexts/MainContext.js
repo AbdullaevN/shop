@@ -7,6 +7,7 @@ export const mainContext = React.createContext();
 const INIT_STATE = {
   products: null,
   productEdit: null,
+  phoneDetails: null,
   phonesCountInCart: JSON.parse(localStorage.getItem("cart"))
     ? JSON.parse(localStorage.getItem("cart")).phones.length
     : 0,
@@ -17,6 +18,8 @@ const reducer = (state = INIT_STATE, action) => {
   switch (action.type) {
     case "GET_PRODUCTS":
       return { ...state, products: action.payload };
+    case "GET_DETAILS":
+      return { ...state, phoneDetails: action.payload };
     case "GET_PRODUCTS_TO_EDIT":
       return { ...state, productEdit: action.payload };
     case "CLEAR_PRODUCT_EDIT":
@@ -25,6 +28,7 @@ const reducer = (state = INIT_STATE, action) => {
       return { ...state, phonesCountInCart: action.payload };
     case "GET_CART":
       return { ...state, cart: action.payload };
+
     default:
       return state;
   }
@@ -89,6 +93,21 @@ const MainContextProvider = (props) => {
       );
       console.log(response);
       getProducts();
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  //! Для страницы деталей
+  const getDetails = async (id) => {
+    try {
+      console.log(`${API}${id}`);
+      const response = await axios(`${API}${id}`);
+      let action = {
+        type: "GET_DETAILS",
+        payload: response.data,
+      };
+      dispatch(action);
     } catch (e) {
       console.log(e);
     }
@@ -213,6 +232,64 @@ const MainContextProvider = (props) => {
     localStorage.setItem("cart", JSON.stringify(cart));
     getCart();
   };
+
+  //
+  //
+  //
+  //favorites
+
+  // ! Избранное
+  // ! favorites
+  const addAndDeleteProductInFavorites = (item) => {
+    let favorite = JSON.parse(localStorage.getItem("favorite"));
+    if (!favorite) {
+      favorite = {
+        favorites: [],
+      };
+    }
+    let favProduct = {
+      item: item,
+    };
+    let checkArr = favorite.favorites.filter((elem) => {
+      return elem.item.id === item.id;
+    });
+    if (checkArr.length === 0) {
+      favorite.favorites.push(favProduct);
+    } else {
+      favorite.favorites = favorite.favorites.filter((elem) => {
+        return elem.item.id !== item.id;
+      });
+    }
+    localStorage.setItem("favorite", JSON.stringify(favorite));
+    dispatch({
+      type: "ADD_AND_DELETE_FAVORITES",
+      payload: favorite.favorites.length,
+    });
+  };
+  const checkFavoriteInFavorites = (id) => {
+    let favorite = JSON.parse(localStorage.getItem("favorite"));
+    if (!favorite) {
+      favorite = {
+        favorites: [],
+      };
+    }
+    let checkArr = favorite.favorites.filter((elem) => {
+      return elem.item.id === id;
+    });
+    if (checkArr.length === 0) {
+      return false;
+    } else {
+      return true;
+    }
+  };
+  const getFavorite = () => {
+    let favorite = JSON.parse(localStorage.getItem("favorite"));
+    dispatch({
+      type: "GET_FAVORITES",
+      payload: favorite,
+    });
+  };
+
   return (
     <mainContext.Provider
       value={{
@@ -225,13 +302,24 @@ const MainContextProvider = (props) => {
         //
         handlePage,
         //
+        getDetails: getDetails,
+        //
         addEndDeletePhoneCart,
         checkPhoneInCart,
         getCart,
         changeCountPhone,
+
+        //
+
+        //
+        addAndDeleteProductInFavorites: addAndDeleteProductInFavorites,
+        checkFavoriteInFavorites: checkFavoriteInFavorites,
+        getFavorite: getFavorite,
         //
         products: state.products,
         productEdit: state.productEdit,
+        //
+        phoneDetails: state.phoneDetails,
 
         //
         totalPosts: totalPosts,
@@ -240,6 +328,11 @@ const MainContextProvider = (props) => {
         currentPage: currentPage,
         phonesCountInCart: state.phonesCountInCart,
         cart: state.cart,
+        //
+        //
+
+        productsCountInFavorites: state.productsCountInFavorites,
+        favorites: state.favorites,
       }}
     >
       {props.children}

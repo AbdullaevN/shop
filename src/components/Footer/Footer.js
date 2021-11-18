@@ -7,37 +7,7 @@ import { Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Button from "@restart/ui/esm/Button";
 
-//
-// import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
-
-// const containerStyle = {
-//   width: "400px",
-//   height: "400px",
-// };
-
-// const center = {
-//   lat: -3.745,
-//   lng: -38.523,
-// };
-//
-
 const Footer = () => {
-  // const { isLoaded } = useJsApiLoader({
-  //   id: "google-map-script",
-  //   googleMapsApiKey: "YOUR_API_KEY",
-  // });
-
-  // const [map, setMap] = React.useState(null);
-
-  // const onLoad = React.useCallback(function callback(map) {
-  //   const bounds = new window.google.maps.LatLngBounds();
-  //   map.fitBounds(bounds);
-  //   setMap(map);
-  // }, []);
-
-  // const onUnmount = React.useCallback(function callback(map) {
-  //   setMap(null);
-  // }, []);
   return (
     <Fragment>
       <div className="mainFtr ">
@@ -47,7 +17,9 @@ const Footer = () => {
             <Link to="/order">
               <a href="#">Доставка</a>
             </Link>
-            <a href="#">Оплата</a>
+            <Link to="/cart">
+              <a href="#">Оплата</a>
+            </Link>
             <a href="#">Возврат товара</a>
             <a href="#">Личный кабинет</a>
           </div>
@@ -77,20 +49,12 @@ const Footer = () => {
             <span className="fourth">
               Получите доступ к эксклюзивным скидкам
             </span>
-            {/* <input type="email" placeholder="Email"></input> */}
             <Form
               onSubmit={(e) => {
                 e.preventDefault();
                 console.log("worked");
               }}
             >
-              {/* <GoogleMap
-                mapContainerStyle={containerStyle}
-                center={center}
-                zoom={10}
-                onLoad={onLoad}
-                onUnmount={onUnmount}
-              ></GoogleMap> */}
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
                 <Form.Control type="email" placeholder="Enter email" />
@@ -98,17 +62,6 @@ const Footer = () => {
                   We'll never share your email with anyone else.
                 </Form.Text>
               </Form.Group>
-              {/* 
-              <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>Password</Form.Label>
-                <Form.Control type="password" placeholder="Password" />
-              </Form.Group> */}
-              {/* <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                <Form.Check type="checkbox" label="Check me out" />
-              </Form.Group> */}
-              {/* <Button variant="primary" type="submit">
-                Submit
-              </Button> */}
             </Form>{" "}
           </div>
         </div>

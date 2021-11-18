@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { mainContext } from "../../contexts/MainContext";
+import { Button } from "react-bootstrap";
 
 const Pagination = () => {
   const { totalPosts, postsPerPage, handlePage, currentPage } =
@@ -15,14 +16,16 @@ const Pagination = () => {
         <ul>
           {pageNumbers.map((item) => (
             <li key={item}>
-              <button
+              <Button
                 style={{
-                  background: item === currentPage ? "lightgrey" : "grey",
+                  background: item === currentPage ? "blue" : " lightblue",
+                  margin: "5px",
                 }}
+                variant="contained"
                 onClick={() => handlePage(item)}
               >
                 {item}
-              </button>
+              </Button>
             </li>
           ))}
         </ul>
