@@ -17,7 +17,7 @@ import { useHistory } from "react-router-dom";
 import { adminContext } from "../../contexts/AdminContex";
 import { authContext } from "../../contexts/AuthContext";
 import IconButton from "@mui/material/IconButton";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+// import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 const HomePage = () => {
   //test
   const { getProducts, getPhones, phonesCountInCart } = useContext(mainContext);
@@ -189,7 +189,7 @@ const HomePage = () => {
                 color="inherit"
               >
                 <Badge badgeContent={phonesCountInCart} color="error">
-                  <ShoppingCartIcon />
+                  {/* <ShoppingCartIcon /> */}
                 </Badge>
               </IconButton>
             </Link>

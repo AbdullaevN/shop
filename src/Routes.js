@@ -16,6 +16,7 @@ import AdminContextProvider from "./contexts/AdminContex";
 import AuthContextProvider from "./contexts/AuthContext";
 import NewsPage from "./Pages/NewsPage/NewsPage";
 import ContactPage from "./Pages/ContactPage"
+import CartPage from "./Pages/CartPage"
 
 const Routes = () => {
   return (
@@ -24,7 +25,7 @@ const Routes = () => {
         <MainContextProvider>
           <BrowserRouter>
             <NavbarComp />
-
+            {/* test */}
             <Switch>
               <Route exact path="/" component={HomePage} />
               <Route exact path="/admin" component={AdminPage} />
