@@ -27,6 +27,7 @@ const AddedCard = (props) => {
             <tr>
               <th>Image</th>
               <th> Name</th>
+              <th> Brand</th>
               <th>Price</th>
               <th>Details</th>
               <th>Edit</th>
@@ -43,6 +44,7 @@ const AddedCard = (props) => {
                   />
                 </td>
                 <td>{item.name}</td>
+                <td>{item.brand}</td>
                 <td>{item.price}</td>
                 <td>{item.details}</td>
                 <td>

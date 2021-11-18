@@ -15,7 +15,8 @@
       "price": 500,
       "details": "hiuhiuh",
       "image": "llllll",
-      "id": 15
+      "id": 15,
+      "brand": "brand"
     },
     {
       "name": "LU",
