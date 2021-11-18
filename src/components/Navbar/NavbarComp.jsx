@@ -24,7 +24,7 @@ import LogoutIcon from "@mui/icons-material/Logout";
 import SignGoogle from "../SignGoogle/SignGoogle";
 import Favorites from "../Favorites/Favorites";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-
+//Hello
 const HomePage = () => {
   //test
   const { getProducts, getPhones, phonesCountInCart } = useContext(mainContext);
@@ -203,7 +203,6 @@ const HomePage = () => {
                 aria-label="show 4 new mails"
                 color="inherit"
               >
-
                 <Badge badgecontent={phonesCountInCart} color="error">
                   <ShoppingCartIcon />
                 </Badge>
