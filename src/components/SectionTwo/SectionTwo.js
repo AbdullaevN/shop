@@ -1,5 +1,6 @@
 import React from "react";
 import "./SectionTwo.css";
+import Aos from "aos";
 
 const SectionTwo = ({ id }) => {
   return (
@@ -7,6 +8,7 @@ const SectionTwo = ({ id }) => {
       <h1 style={{ marginTop: "40px", marginBottom: "80px" }}>
         Unusual and unique jewelry
       </h1>
+
 
       <div className="twoPics">
         <div
@@ -16,15 +18,17 @@ const SectionTwo = ({ id }) => {
             flexWrap: "wrap",
           }}
         >
-          <div className="pic1">
-            <a href="#">
-              <img
-                style={{ paddingBottom: "35px", height: "auto" }}
-                src="https://light-catchers.ru/wp-content/uploads/2019/06/MYUZAF_180205_06.jpg"
-              ></img>
-              <span>great</span>
-            </a>
-          </div>
+          
+            <div className="pic1">
+              <a href="#">
+                <img
+                  style={{ paddingBottom: "35px", height: "auto" }}
+                  src="https://light-catchers.ru/wp-content/uploads/2019/06/MYUZAF_180205_06.jpg"
+                ></img>
+                <span>great</span>
+              </a>
+            </div>
+          
 
           <div className="pic2">
             <a href="#">
