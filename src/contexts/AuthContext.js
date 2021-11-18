@@ -10,8 +10,8 @@ import { auth } from "../FireBase";
 
 export const authContext = React.createContext();
 const INIT_STATE = {
-  user: null,
-  email: null,
+  user: "",
+  email: "",
 };
 const reducer = (state = INIT_STATE, action) => {
   switch (action.type) {

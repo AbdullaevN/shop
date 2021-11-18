@@ -5,8 +5,8 @@ import { mainContext } from "../../contexts/MainContext";
 import { useHistory } from "react-router-dom";
 import { adminContext } from "../../contexts/AdminContex";
 import { authContext } from "../../contexts/AuthContext";
-import LoginIcon from "@mui/icons-material/Login";
 import LogoutIcon from "@mui/icons-material/Logout";
+import LoginIcon from "@mui/icons-material/Login";
 
 const SignGoogle = () => {
   //test
@@ -50,7 +50,7 @@ const SignGoogle = () => {
           style={{ maxWidth: "100px" }}
         >
           <Navbar.Text>
-            Signed in as: <Badge bg="secondary">{user.name}</Badge>
+            Signed in as: <Badge bg="secondary">{user.displayName}</Badge>
           </Navbar.Text>
         </Navbar.Collapse>
         <Button
@@ -66,6 +66,7 @@ const SignGoogle = () => {
         >
           <LogoutIcon style={{ height: "20px", width: "20px" }} />
           {/* <h2>Sign with google</h2> */}
+          {/* <LoginIcon /> */}
         </Button>
       </>
     );
@@ -87,8 +88,8 @@ const SignGoogle = () => {
           Sign Up
         </Button> */}
         <Button onClick={authWithGoogle}>
-          {/* <LoginIcon /> */}
-          <h2>Sign with google</h2>
+          <LoginIcon />
+          {/* <h2>Sign with google</h2> */}
         </Button>
       </>
     );

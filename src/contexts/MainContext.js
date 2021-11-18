@@ -116,7 +116,7 @@ const MainContextProvider = (props) => {
   //Пагинация
   const [posts, setPosts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage] = useState(6);
+  const [postsPerPage] = useState(4);
 
   useEffect(() => {
     if (state.products) {
