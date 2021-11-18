@@ -101,6 +101,7 @@ const MainContextProvider = (props) => {
   //! Для страницы деталей
   const getDetails = async (id) => {
     try {
+
       const response = await axios(`${API}/${id}`);
       let action = {
         type: "GET_DETAILS",

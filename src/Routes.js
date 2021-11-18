@@ -20,8 +20,6 @@ import ContactPage from "./Pages/ContactPage";
 import CartPage from "./Pages/CartPage";
 import CreditCardPage from "./Pages/CreditCard/CreditCardPage";
 import ShowMore from "./Pages/ShowMore/ShowMore";
-import Navibar from "./components/Navbar/Navibar";
-// import ClientContextProvider from "./contexts/ClientContext";
 
 const Routes = () => {
   return (
