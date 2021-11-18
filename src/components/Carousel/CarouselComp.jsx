@@ -14,7 +14,7 @@ const CarouselComp = () => {
       <Carousel fade>
         <Carousel.Item>
           <hr />
-          <img className="d-block" src={Vid} alt="First slide"></img>
+          {/* <img className="d-block" src={Vid} alt="First slide"></img> */}
 
           <Carousel.Caption></Carousel.Caption>
         </Carousel.Item>

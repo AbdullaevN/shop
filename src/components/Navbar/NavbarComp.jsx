@@ -93,8 +93,8 @@ const HomePage = () => {
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
-              className="me-auto my-2 my-lg-0"
-              style={{ maxHeight: "100px" }}
+              className="me-auto  my-lg-0"
+              style={{ maxHeight: "50px" }}
               navbarScroll
             >
               <Nav.Link className="for-font" href="#action1">
@@ -135,31 +135,48 @@ const HomePage = () => {
                 onChange={(e) => filterProducts("q", e.target.value)}
                 type="search"
                 placeholder="Search"
-                className="me-2 justify-content-center"
+                className=""
                 aria-label="Search"
-                style={{height: '45px', width: '170px'}}
+                style={{
+                  height: "45px",
+                  width: "170px",
+                  display: "flex",
+                  justifyContent: "center",
+                }}
               />
-            {user ? temp : <></>}
-              <SignGoogle />
-  
-            <Link to="/cart">
-              <IconButton
-                size="large"
-                aria-label="show 4 new mails"
-                color="inherit"
-              >
-                <Badge badgecontent={phonesCountInCart} color="error">
-                  <ShoppingCartIcon />
-                </Badge>
-              </IconButton>
-            </Link>
-            <Favorites
-              open={open}
-              handleCloseFavorite={handleCloseFavorite}
-              handleOpen={handleOpen}
-            />
-            </Form>
+              {user ? temp : <></>}
 
+              <Link to="/cart">
+                <IconButton
+                // size="large"
+                // aria-label="show 4 new mails"
+                // color="inherit"
+                >
+                  {/* <Badge badgecontent={phonesCountInCart} color="error"> */}
+                  <Button
+                    style={{
+                      height: "30px",
+                      width: "30px",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                    variant="outline-success"
+                  >
+                    <ShoppingCartIcon
+                      style={{ height: "15px", width: "15px" }}
+                    />
+                  </Button>
+                  {/* </Badge> */}
+                </IconButton>
+              </Link>
+              {/* <Favorites
+                open={open}
+                handleCloseFavorite={handleCloseFavorite}
+                handleOpen={handleOpen}
+              /> */}
+            </Form>
+            <SignGoogle />
           </Navbar.Collapse>
         </Container>
       </Navbar>
