@@ -49,32 +49,45 @@ const SignGoogle = () => {
           className=" navbar"
           // style={{width: '390px'}}
         >
-          <Navbar.Text style={{display:'flex', flexDirection: 'column'}}>
-            Signed in as: <Badge bg="secondary">{user.displayName}</Badge>
-          {user ? (
-            user.email === "nurlanabdullaev9820@gmail.com" ? (
-              <Link to="/admin">
-                <button>Aдмин</button>
-              </Link>
-            ) : null
-          ) : null}
-        <Button
-          className=""
-          style={{
-            height: "40px",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-          variant="outline-success"
-          onClick={() => logOut()}
-        >
-          <LogoutIcon style={{ height: "20px", width: "20px" }} />
-          {/* <h2>Sign with google</h2> */}
-          {/* <LoginIcon /> */}
-        </Button>
+          <Navbar.Text>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                margin: "5px",
+              }}
+            >
+              Signed in as: <Badge bg="secondary">{user.displayName}</Badge>
+            </div>
+            {user ? (
+              user.email === "nurlanabdullaev9820@gmail.com" ? (
+                <Link to="/admin">
+                  <Button
+                    variant="outlined"
+                    style={{ width: "40px", height: "25px", fontSize: "0.5em" }}
+                  >
+                    Admin
+                  </Button>
+                </Link>
+              ) : null
+            ) : null}
           </Navbar.Text>
 
+          <Button
+            className=""
+            style={{
+              height: "30px",
+              width: "30px",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+            variant="outline-success"
+            onClick={() => logOut()}
+          >
+            <LogoutIcon style={{ height: "20px", width: "20px" }} />
+            {/* <LoginIcon /> */}
+          </Button>
         </Navbar.Collapse>
       </>
     );
