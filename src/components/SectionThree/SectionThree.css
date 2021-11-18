@@ -27,7 +27,7 @@ h3 {
     background: rgb(154, 143, 228);
 }
 
-@media all and (max-width: 450px) {
+@media all and (max-width: 570px) {
     .blockTwo img {
         display: none;
     }
