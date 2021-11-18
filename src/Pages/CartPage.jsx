@@ -44,6 +44,7 @@ const CartPage = () => {
                       Count
                     </TableCell>
                     <TableCell align="right">Summa</TableCell>
+                    <TableCell align="right">#</TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
@@ -74,7 +75,8 @@ const CartPage = () => {
                           variant="primary"
                           style={{ right: "0", marginRight: "20px" }}
                           onClick={() => {
-                            addEndDeletePhoneCart(item);
+                            addEndDeletePhoneCart(item.phone);
+
                             getCart();
                           }}
                         >

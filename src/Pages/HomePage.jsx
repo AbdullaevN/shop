@@ -20,7 +20,7 @@ const HomePage = () => {
       {products ? (
         products.length ? (
           //
-          <AddedCard />
+          <AddedCard products={products} key={products.id} />
         ) : (
           <div className="d-flex h-50">
             <h2>Товаров нет</h2>
