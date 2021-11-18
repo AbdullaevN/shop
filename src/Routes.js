@@ -19,14 +19,18 @@ import ContactPage from "./Pages/ContactPage";
 import CartPage from "./Pages/CartPage";
 import CreditCardPage from "./Pages/CreditCard/CreditCardPage";
 import ShowMore from "./Pages/ShowMore/ShowMore";
+import Navibar from "./components/Navbar/Navibar";
+// import ClientContextProvider from "./contexts/ClientContext";
 
 const Routes = () => {
   return (
+    // <ClientContextProvider>
     <AuthContextProvider>
       <AdminContextProvider>
         <MainContextProvider>
           <BrowserRouter>
             <NavbarComp />
+            {/* <Navibar /> */}
 
             <Switch>
               <Route exact path="/" component={HomePage} />
@@ -49,6 +53,7 @@ const Routes = () => {
         </MainContextProvider>
       </AdminContextProvider>
     </AuthContextProvider>
+    // </ClientContextProvider>
   );
 };
 

@@ -5,12 +5,17 @@ import { mainContext } from "../../contexts/MainContext";
 import Logo from "../Navbar/TAMLER.svg";
 import "./AddedCard.css";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 
 const AddedCard = (props) => {
   const { getProducts, products, deleteProduct, currentPosts } =
     useContext(mainContext);
-  const { addEndDeletePhoneCart, checkPhoneInCart } =
-    React.useContext(mainContext);
+  const {
+    addEndDeletePhoneCart,
+    checkPhoneInCart,
+    addAndDeleteProductInFavorites,
+    checkFavoriteInFavorites,
+  } = React.useContext(mainContext);
   const params = useParams();
   const history = useHistory();
   useEffect(() => {
@@ -57,6 +62,17 @@ const AddedCard = (props) => {
               >
                 <ShoppingCartIcon
                   color={checkPhoneInCart(item.id) ? "error" : "primary"}
+                />
+              </Button>
+              <Button
+                size="small"
+                variant="outlined"
+                onClick={() => addAndDeleteProductInFavorites(item)}
+              >
+                <FavoriteIcon
+                  color={
+                    checkFavoriteInFavorites(item.id) ? "error" : "primary"
+                  }
                 />
               </Button>
               <Link to={`/showmore/${item.id}`}>

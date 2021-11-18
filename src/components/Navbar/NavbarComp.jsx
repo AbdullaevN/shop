@@ -18,10 +18,17 @@ import { adminContext } from "../../contexts/AdminContex";
 import { authContext } from "../../contexts/AuthContext";
 import IconButton from "@mui/material/IconButton";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import LoginIcon from "@mui/icons-material/Login";
+import LogoutIcon from "@mui/icons-material/Logout";
+import SignGoogle from "../SignGoogle/SignGoogle";
+import Favorites from "../Favorites/Favorites";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+
 const HomePage = () => {
   //test
   const { getProducts, getPhones, phonesCountInCart } = useContext(mainContext);
-  const { authWithGoogle, user, logOut } = React.useContext(authContext);
+  const { authWithGoogle, user, logOut, email, adminEmail } =
+    React.useContext(authContext);
 
   const { logoutUser, setUser } = React.useContext(adminContext);
   const history = useHistory();
@@ -35,7 +42,16 @@ const HomePage = () => {
     // console.log(newUrl);
   }
 
-  let button;
+  //
+  //
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleCloseFavorite = () => setOpen(false);
+  const { productsCountInFavorites, getFavorite } =
+    React.useContext(mainContext);
+  //
+  //
+
   function logout() {
     logoutUser();
     localStorage.clear();
@@ -49,51 +65,24 @@ const HomePage = () => {
   }
   useEffect(() => setuser(), [struser]);
   // console.log(user, "user");
-  if (user) {
-    let struser = JSON.stringify(user);
-    localStorage.setItem("user", struser);
-    button = (
-      <>
-        <Navbar.Collapse
-          className="justify-content-end me-2 navbar"
-          style={{ maxWidth: "200px" }}
-        >
-          <Navbar.Text>
-            Signed in as: <Badge bg="secondary">{user.name}</Badge>
-          </Navbar.Text>
-        </Navbar.Collapse>
-        <Button
-          className=""
-          style={{ height: "30px" }}
-          variant="outline-success"
-          onClick={() => logOut()}
-        >
-          <i class="bi bi-door-closed"></i>
-        </Button>
-      </>
-    );
-  } else {
-    button = (
-      <>
-        {/* <Button
-          className="me-2 text-success"
-          variant="outline-dark"
-          onClick={handleShowLogin}
-        >
-          Log In
-        </Button>
-        <Button
-          className="me-2 text-success"
-          variant="outline-dark"
-          onClick={handleShow}
-        >
-          Sign Up
-        </Button> */}
-        <Button onClick={authWithGoogle}></Button>
-      </>
+
+  let temp;
+  if (email === adminEmail) {
+    temp = (
+      <Link to="/admin">
+        <Button variant="contained">Admin</Button>
+      </Link>
     );
   }
-
+  let temp1;
+  let gg = <SignGoogle />;
+  if (gg) {
+    temp1 = (
+      <Link to="/admin">
+        <Button variant="contained">Admin</Button>
+      </Link>
+    );
+  }
   return (
     <div className="main-nav mb-3">
       <Navbar className="navbar " bg="light" expand="lg">
@@ -147,18 +136,56 @@ const HomePage = () => {
                 className="me-2 justify-content-center"
                 aria-label="Search"
               />
-              {button}
             </Form>
-            {/* <Link to="/sign-in" className="">
-              <Button className="for-font sign" variant="outline-success">
+            {user ? temp : <></>}
+            {<SignGoogle /> ? temp1 : <></>}
+            <Link to="/sign-in" className="">
+              <Button
+                className="for-font sign"
+                variant="outline-success"
+                style={{
+                  height: " 40px",
+                  width: "60px",
+                  fontSize: "12px",
+                  display: "flex",
+                  alignItems: "center",
+                  textDecoration: "none",
+                }}
+              >
                 Sign In
               </Button>
             </Link>
             <Link to="/sign-up" className="">
-              <Button className="for-font sign" variant="outline-success">
+              <Button
+                className="for-font sign"
+                variant="outline-success"
+                style={{
+                  height: " 40px",
+                  width: "60px",
+                  fontSize: "12px",
+                  display: "flex",
+                  alignItems: "center",
+                  textDecoration: "none",
+                }}
+              >
                 Sign Up
               </Button>
-            </Link> */}
+            </Link>
+
+            <IconButton
+              size="large"
+              aria-label="show 17 new notifications"
+              color="inherit"
+            >
+              <Badge badgeContent={productsCountInFavorites} color="primary">
+                <FavoriteIcon
+                  onClick={() => {
+                    handleOpen();
+                    getFavorite();
+                  }}
+                />
+              </Badge>
+            </IconButton>
             {/* <Link to="/cart" className="">
               <Button className="for-font sign" variant="outline-success">
                 <i class="bi bi-cart2"></i>
@@ -175,6 +202,11 @@ const HomePage = () => {
                 </Badge>
               </IconButton>
             </Link>
+            <Favorites
+              open={open}
+              handleCloseFavorite={handleCloseFavorite}
+              handleOpen={handleOpen}
+            />
           </Navbar.Collapse>
         </Container>
       </Navbar>

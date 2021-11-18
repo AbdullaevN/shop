@@ -4,17 +4,22 @@ import {
   signInWithPopup,
   onAuthStateChanged,
   signOut,
+  signInWithEmailAndPassword,
 } from "firebase/auth";
 import { auth } from "../FireBase";
 
 export const authContext = React.createContext();
 const INIT_STATE = {
   user: null,
+  email: null,
 };
 const reducer = (state = INIT_STATE, action) => {
   switch (action.type) {
     case "SET_USER":
       return { ...state, user: action.payload };
+    case "EMAIL":
+      return { ...state, email: action.payload };
+
     default:
       return state;
   }
@@ -53,12 +58,31 @@ const AuthContextProvider = (props) => {
       console.log(e);
     }
   };
+
+  //
+  let adminEmail = "nurlanabdullaev9820@gmail.com";
+
+  const loginUserWithEmail = async (email, password) => {
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      if (email === adminEmail) {
+        dispatch({
+          type: "EMAIL",
+          payload: email,
+        });
+      }
+    } catch (e) {
+      console.log(e);
+    }
+  };
   return (
     <authContext.Provider
       value={{
         authWithGoogle,
+        loginUserWithEmail,
         logOut,
-
+        adminEmail,
+        email: state.email,
         user: state.user,
       }}
     >
