@@ -45,7 +45,7 @@ const CreateCard = () => {
           }}
         >
           {({ handleSubmit, handleChange, values, touched, errors }) => (
-            <Form onSubmit={handleSubmit} className=" container divka col-3">
+            <Form onSubmit={handleSubmit} className=" container divka col-3" style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
               <Form.Group className="mb-3" controlId="formBasicText">
                 <Form.Label>Name</Form.Label>
                 <Form.Control
@@ -59,7 +59,7 @@ const CreateCard = () => {
                 />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicText">
-                <Form.Label>Brnad</Form.Label>
+                <Form.Label>Brand</Form.Label>
                 <Form.Control
                   name="brand"
                   onChange={handleChange}

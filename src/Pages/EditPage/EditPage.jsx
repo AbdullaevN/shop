@@ -4,6 +4,7 @@ import { Link, useHistory, useParams } from "react-router-dom";
 import { mainContext } from "../../contexts/MainContext";
 import * as yup from "yup";
 import { Formik } from "formik";
+import '././EditPage.css'
 
 const EditPage = () => {
   const data = useContext(mainContext);
@@ -37,7 +38,7 @@ const EditPage = () => {
     <div>
       <h1>EDIT PAGE</h1>
       <div>
-        <div>
+        <div className='main-edit'>
           {productEdit ? (
             <Formik
               validationSchema={schema}
