@@ -137,6 +137,7 @@ const HomePage = () => {
                 placeholder="Search"
                 className="me-2 justify-content-center"
                 aria-label="Search"
+                style={{height: '45px', width: '170px'}}
               />
             {user ? temp : <></>}
               <SignGoogle />
