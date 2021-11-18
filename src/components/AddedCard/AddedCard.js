@@ -40,6 +40,7 @@ const AddedCard = (props) => {
             </Card.Body>
             <ListGroup className="list-group-flush  ">
               <ListGroupItem className="inp">{item.name}</ListGroupItem>
+              <ListGroupItem className="inp">{item.brand}</ListGroupItem>
               <ListGroupItem className="inp">{item.price}</ListGroupItem>
 
               <ListGroupItem
