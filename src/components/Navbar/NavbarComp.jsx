@@ -17,6 +17,7 @@ import { useHistory } from "react-router-dom";
 import { adminContext } from "../../contexts/AdminContex";
 import { authContext } from "../../contexts/AuthContext";
 import IconButton from "@mui/material/IconButton";
+// import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import LoginIcon from "@mui/icons-material/Login";
 import LogoutIcon from "@mui/icons-material/Logout";
@@ -202,6 +203,7 @@ const HomePage = () => {
                 aria-label="show 4 new mails"
                 color="inherit"
               >
+
                 <Badge badgecontent={phonesCountInCart} color="error">
                   <ShoppingCartIcon />
                 </Badge>

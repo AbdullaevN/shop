@@ -11,28 +11,53 @@
   ],
   "products": [
     {
-      "name": "VIDA",
+      "name": "Gold Chane Necklace",
       "price": 500,
-      "details": "hiuhiuh",
-      "image": "https://light-catchers.ru/wp-content/uploads/2019/05/IMG_3696.jpg",
+      "details": "• Large gold curb chain necklace • Love me knot ring • Modern cigar ring • Oversize men’s white button up • Aurate jewelry",
+      "image": "https://i.pinimg.com/750x/2c/ff/73/2cff73c61e6617942d119ba14bba365f.jpg",
       "id": 15,
-      "brand": "Dior"
+
+      "brand": "Cartier"
     },
     {
-      "name": "LU",
-      "brand": "lu",
-      "price": 550,
-      "details": "shfeibfeub",
-      "image": "https://light-catchers.ru/wp-content/uploads/2021/04/retush-ruk_2.jpeg",
+      "name": "Simple Silver Necklace",
+      "brand": "BULGARI",
+      "price": "380",
+      "details": "Handmade product Materials: Silver Adjustable length Style: Minimalist",
+      "image": "https://i.pinimg.com/564x/14/ce/52/14ce5271156b9bab5a45a00e6d102177.jpg",
       "id": 16
     },
     {
-      "name": "vu",
-      "brand": "vu",
-      "price": 120,
-      "details": "hjhkwhiinoi",
-      "image": "https://light-catchers.ru/wp-content/uploads/2021/04/img_3523_1.jpeg",
+      "name": "Gold Chunky Hoop Earrings",
+      "brand": "Chopard",
+      "price": "40",
+      "details": "18K PVD Gold Plated Stainless Steel Base Hinged Top Closure Hoop Width: 2.9 cm Hypoallergenic Tarnish Resistant Includes soft cloth for cleaning after use Delivered in a custom Dos Nueve Studio jewelry box ",
+      "image": "https://i.pinimg.com/564x/73/ca/1f/73ca1f5c950f624f343248245720613d.jpg",
       "id": 17
+    },
+    {
+      "name": "ID Chain Necklace",
+      "brand": "Tiffani  Co",
+      "price": "150",
+      "details": "18K PVD Gold Plated Stainless Steel Base Chain Length: 16'' Lobster Clasp Closure Hypoallergenic Tarnish Resistant Includes soft cloth for cleaning after use Delivered in a custom Dos Nueve Studio jewelry box",
+      "image": "https://cdn.shopify.com/s/files/1/0529/0518/1374/products/IMG_3116_720x.jpg?v=1620161227",
+      "id": 18
+    },
+    {
+      "name": "Ball And Chain Bracelet",
+      "brand": "Boucheron",
+      "price": 220,
+      "details": "Handcrafted gold plated chain bracelet or silver The adjustable size looks great on any wrist Lightweight, but durable & anti-tarnish Measures: 6.5\"-8\" adjustable",
+      "image": "https://i.pinimg.com/564x/19/ab/59/19ab5956ba3cc926cb809b9fd199276e.jpg",
+      "id": 19
+    },
+    {
+      "name": "The Rainbow Ring",
+      "brand": "Swarovski",
+      "price": 80,
+      "details": "4K Gold Fill",
+      "image": "https://cdn.shopify.com/s/files/1/1734/4153/products/4T1A7371_1_1400x1400.jpg?v=1599757855",
+      "id": 20
     }
   ]
 }
