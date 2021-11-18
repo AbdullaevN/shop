@@ -13,8 +13,14 @@ import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
 
 const CartPage = () => {
-  const { getCart, cart, changeCountPhone, totalPrice } =
-    React.useContext(mainContext);
+  const {
+    getCart,
+    cart,
+    changeCountPhone,
+    totalPrice,
+
+    addEndDeletePhoneCart,
+  } = React.useContext(mainContext);
   React.useEffect(() => {
     getCart();
   }, []);
@@ -63,6 +69,18 @@ const CartPage = () => {
                         />
                       </TableCell>
                       <TableCell align="right">{item.subPrice} som</TableCell>
+                      <TableCell>
+                        <Button
+                          variant="primary"
+                          style={{ right: "0", marginRight: "20px" }}
+                          onClick={() => {
+                            addEndDeletePhoneCart(item);
+                            getCart();
+                          }}
+                        >
+                          Убрать с корзины
+                        </Button>
+                      </TableCell>
                     </TableRow>
                   ))}
                   <TableRow>
