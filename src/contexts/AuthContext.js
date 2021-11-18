@@ -28,6 +28,7 @@ const reducer = (state = INIT_STATE, action) => {
 const AuthContextProvider = (props) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
   // AUTH with google
+
   const googleProvider = new GoogleAuthProvider();
   const authWithGoogle = async () => {
     try {

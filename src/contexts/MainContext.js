@@ -162,7 +162,7 @@ const MainContextProvider = (props) => {
         cart.phones.push(product);
       } else {
         cart.phones = cart.phones.filter((item) => {
-          return item.phone.id !== phone.id;
+          return item.id !== phone.id;
         });
       }
       cart.totalPrice = calcTotalPrice(cart);

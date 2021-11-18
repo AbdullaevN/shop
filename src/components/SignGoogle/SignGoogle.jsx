@@ -52,6 +52,13 @@ const SignGoogle = () => {
           <Navbar.Text>
             Signed in as: <Badge bg="secondary">{user.displayName}</Badge>
           </Navbar.Text>
+          {user ? (
+            user.email === "nurlanabdullaev9820@gmail.com" ? (
+              <Link to="/admin">
+                <button>Войти как админ</button>
+              </Link>
+            ) : null
+          ) : null}
         </Navbar.Collapse>
         <Button
           className=""
