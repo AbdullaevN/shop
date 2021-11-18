@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { Button } from "@mui/material";
 import { mainContext } from "../../contexts/MainContext";
 import "././ShowMore.css";
@@ -27,9 +27,11 @@ const ShowMore = () => {
           <div>
             <h2>{phoneDetails.name}</h2>
             <p>{phoneDetails.details}</p>
-            <Button variant="outlined" color="secondary">
-              Добавить в корзину
-            </Button>
+            <Link to="/">
+              <Button variant="outlined" color="secondary">
+                Go Home
+              </Button>
+            </Link>
             <div>
               <h4>Описание:</h4>
               <ul className="character">
