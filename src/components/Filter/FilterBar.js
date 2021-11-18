@@ -42,35 +42,35 @@ const FilterBar = () => {
               name="radio-buttons-group"
               onChange={(e) => filterProduct("brand", e.target.value)}
             >
-              <FormControlLabel value="lu" control={<Radio />} label="lu" />
+              <FormControlLabel value="GUCCI" control={<Radio />} label="GUCCI" />
               <FormControlLabel
-                value="Samsung"
+                value="Swarovski"
                 control={<Radio />}
-                label="Samsung"
+                label="Swarovski"
               />
               <FormControlLabel
-                value="apple"
+                value="Cartier"
                 control={<Radio />}
-                label="apple"
+                label="Cartier"
               />
               <FormControlLabel
-                value="Meizu"
+                value="Boucheron"
                 control={<Radio />}
-                label="Meizu"
+                label="Boucheron"
               />
-              <FormControlLabel value="OPPO" control={<Radio />} label="OPPO" />
-              <FormControlLabel value="VIVO" control={<Radio />} label="VIVO" />
-              <FormControlLabel value="LG" control={<Radio />} label="LG" />
+              <FormControlLabel value="Van Cleef Arpels" control={<Radio />} label="Van Cleef Arpels" />
+              <FormControlLabel value="Bucelatti" control={<Radio />} label="Bucelatti" />
+              <FormControlLabel value="DAMIANI" control={<Radio />} label="DAMIANI" />
               <FormControlLabel
-                value="HONOR"
+                value="Tiffani Co"
                 control={<Radio />}
-                label="HONOR"
+                label="Tiffani  Co"
               />
-              <FormControlLabel value="ASUS" control={<Radio />} label="ASUS" />
+              <FormControlLabel value="BULGARI" control={<Radio />} label="BULGARI" />
               <FormControlLabel
-                value="Huawei"
+                value="Chopard"
                 control={<Radio />}
-                label="Huawei"
+                label="Chopard"
               />
             </RadioGroup>
           </FormControl>
