@@ -101,13 +101,14 @@ const MainContextProvider = (props) => {
   //! Для страницы деталей
   const getDetails = async (id) => {
     try {
-      console.log(`${API}${id}`);
+
       const response = await axios(`${API}/${id}`);
       let action = {
         type: "GET_DETAILS",
         payload: response.data,
       };
       dispatch(action);
+      console.log(response.data);
     } catch (e) {
       console.log(e);
     }
@@ -162,7 +163,7 @@ const MainContextProvider = (props) => {
         cart.phones.push(product);
       } else {
         cart.phones = cart.phones.filter((item) => {
-          return item.id !== phone.id;
+          return item.phone.id !== phone.id;
         });
       }
       cart.totalPrice = calcTotalPrice(cart);

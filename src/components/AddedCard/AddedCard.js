@@ -24,7 +24,7 @@ const AddedCard = (props) => {
 
   //
   //TEST
-  console.log();
+
   return (
     <Fragment>
       <div className="container card-div ">
@@ -59,23 +59,13 @@ const AddedCard = (props) => {
                 onClick={() => addEndDeletePhoneCart(item)}
                 size="small"
                 style={{ width: "50px", height: "40px" }}
-              //
+                //
               >
                 <ShoppingCartIcon
                   color={checkPhoneInCart(item.id) ? "error" : "primary"}
                 />
               </Button>
-              {/* <Button
-                size="small"
-                variant="outlined"
-                onClick={() => addAndDeleteProductInFavorites(item)}
-              >
-                <FavoriteIcon
-                  color={
-                    checkFavoriteInFavorites(item.id) ? "error" : "primary"
-                  }
-                />
-              </Button> */}
+
               <Link to={`/showmore/${item.id}`}>
                 <Button size="small" variant="contained">
                   Подробнее
