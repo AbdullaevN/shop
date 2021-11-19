@@ -3,11 +3,12 @@ import { mainContext } from "../../contexts/MainContext";
 import { Button } from "react-bootstrap";
 
 const Pagination = () => {
-  const { totalPosts, postsPerPage, handlePage, currentPage } =
+  const { totalPosts, postsPerPage, handlePage, currentPage,getProducts } =
     React.useContext(mainContext);
   const pageNumbers = [];
   for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
     pageNumbers.push(i);
+    // getProducts()
   }
 
   // const pageNumbers = [1];
@@ -50,6 +51,7 @@ const Pagination = () => {
                 }}
                 variant="contained"
                 onClick={() => handlePage(item)}
+                // onChange={ getProducts()}
               >
                 {item}
               </Button>

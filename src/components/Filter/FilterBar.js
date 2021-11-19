@@ -8,12 +8,13 @@ import { useHistory } from "react-router-dom";
 import { mainContext } from "../../contexts/MainContext";
 
 const FilterBar = () => {
-  const { getProducts } = useContext(mainContext);
+  const { getProducts,resetCurrentPage } = useContext(mainContext);
   const history = useHistory();
   const [brandValue, setBrandValue] = useState("");
 
   let object = new URLSearchParams(window.location.search);
   function filterProduct(key, value) {
+    resetCurrentPage()
     object.set(key, value);
     history.push(`${window.location.pathname}?${object.toString()}`);
     getProducts();
