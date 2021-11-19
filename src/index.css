@@ -42,5 +42,4 @@ code {
 .radio {
   display: flex;
   flex-direction: row;
-  background: rgb(199, 199, 199);
 }
