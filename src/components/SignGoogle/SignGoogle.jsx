@@ -54,7 +54,7 @@ const SignGoogle = () => {
               style={{
                 display: "flex",
                 flexDirection: "column",
-                margin: "5px",
+                // margin: "5px",
               }}
             >
               Signed in as: <Badge bg="secondary">{user.displayName}</Badge>
@@ -63,8 +63,8 @@ const SignGoogle = () => {
               user.email === "nurlanabdullaev9820@gmail.com" ? (
                 <Link to="/admin">
                   <Button
-                    variant="outlined"
-                    style={{ width: "40px", height: "25px", fontSize: "0.5em" }}
+                    variant="outlined-success"
+                    style={{ height: "30px", width: "70px" }}
                   >
                     Admin
                   </Button>
@@ -108,8 +108,18 @@ const SignGoogle = () => {
         >
           Sign Up
         </Button> */}
-        <Button onClick={authWithGoogle}>
-          <LoginIcon />
+        <Button
+          style={{
+            height: "30px",
+            width: "30px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+          variant="outline-success"
+          onClick={authWithGoogle}
+        >
+          <LoginIcon style={{ height: "15px", width: "15px" }} />
           {/* <h2>Sign with google</h2> */}
         </Button>
       </>
