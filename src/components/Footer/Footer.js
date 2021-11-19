@@ -44,7 +44,7 @@ const Footer = () => {
               <img style={{ width: 35, height: 35 }} src={inicon} />
             </a>
           </div>
-          <div className="col-3">
+          <div className="emailBlock col-3">
             <h5>Подписка на новости</h5>
             <span className="fourth">
               Получите доступ к эксклюзивным скидкам
