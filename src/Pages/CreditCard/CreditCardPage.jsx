@@ -7,11 +7,11 @@ import Cards from "react-credit-cards";
 import "react-credit-cards/es/styles-compiled.css";
 import "react-credit-cards/es/styles-compiled.css";
 
-// import { useNavigate } from "react-router";
+import { useHistory } from "react-router-dom";
 
 const CreditCardPage = () => {
   const { handleChange, handleFocus, handleSubmit, values, errors } = useForm();
-  //   const navigate = useNavigate();
+  const navigate = useHistory();
   return (
     <div className="container">
       <div className="box justify-content-center align-items-center">
@@ -92,7 +92,7 @@ const CreditCardPage = () => {
                 type="submit"
                 onClick={() => {
                   alert("Благодарим что выбрали нас");
-                  //   navigate("/");
+                  navigate.push("/");
                 }}
               >
                 Подтвердить заказ

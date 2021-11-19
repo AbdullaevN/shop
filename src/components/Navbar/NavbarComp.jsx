@@ -27,7 +27,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 //Hello
 const HomePage = () => {
   //test
-  const { getProducts, getPhones, phonesCountInCart } = useContext(mainContext);
+  const { getProducts } = useContext(mainContext);
   const { authWithGoogle, user, logOut, email, adminEmail } =
     React.useContext(authContext);
 
@@ -75,15 +75,7 @@ const HomePage = () => {
       </Link>
     );
   }
-  // let temp1;
-  // let gg = <SignGoogle />;
-  // if (gg) {
-  //   temp1 = (
-  //     <Link to="/admin">
-  //       <Button variant="contained">Admin</Button>
-  //     </Link>
-  //   );
-  // }
+
   console.log(user);
   return (
     <div className="main-nav mb-3">
