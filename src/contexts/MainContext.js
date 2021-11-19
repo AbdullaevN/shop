@@ -308,6 +308,7 @@ const MainContextProvider = (props) => {
         checkPhoneInCart,
         getCart,
         changeCountPhone,
+        resetCurrentPage,
 
         //
 

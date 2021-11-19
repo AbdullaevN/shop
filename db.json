@@ -1,63 +1,112 @@
-{
-  "users": [
-    {
-      "username": "Nurlan",
-      "lastName": "Abdullaev",
-      "email": "nurlanabdullaev9820@gmail.com",
-      "phoneNumber": 559113371,
-      "password": "qwerty12",
-      "id": 1
-    }
-  ],
-  "products": [
-    {
-      "name": "Gold Chane Necklace",
-      "price": 500,
-      "details": "• Large gold curb chain necklace • Love me knot ring • Modern cigar ring • Oversize men’s white button up • Aurate jewelry",
-      "image": "https://i.pinimg.com/750x/2c/ff/73/2cff73c61e6617942d119ba14bba365f.jpg",
-      "id": 15,
+{ 
+  "users": [ 
+    { 
+      "username": "Nurlan", 
+      "lastName": "Abdullaev", 
+      "email": "nurlanabdullaev9820@gmail.com", 
+      "phoneNumber": 559113371, 
+      "password": "qwerty12", 
+      "id": 1 
+    } 
+  ], 
+  "products": [ 
+    { 
+      "name": "Gold Chane Necklace", 
+      "price": 500, 
+      "details": "• Large gold curb chain necklace • Love me knot ring • Modern cigar ring • Oversize men’s white button up • Aurate jewelry", 
+      "image": "https://i.pinimg.com/750x/2c/ff/73/2cff73c61e6617942d119ba14bba365f.jpg", 
+      "id": 15, 
+      "brand": "Cartier" 
+    }, 
+    { 
+      "name": "Simple Silver Necklace", 
+      "brand": "BULGARI", 
+      "price": "380", 
+      "details": "Handmade product Materials: Silver Adjustable length Style: Minimalist", 
+      "image": "https://i.pinimg.com/564x/14/ce/52/14ce5271156b9bab5a45a00e6d102177.jpg", 
+      "id": 16 
+    }, 
+    { 
+      "name": "Gold Chunky Hoop Earrings", 
+      "brand": "Chopard", 
+      "price": "40", 
+      "details": "18K PVD Gold Plated Stainless Steel Base Hinged Top Closure Hoop Width: 2.9 cm Hypoallergenic Tarnish Resistant Includes soft cloth for cleaning after use Delivered in a custom Dos Nueve Studio jewelry box ", 
+      "image": "https://i.pinimg.com/564x/73/ca/1f/73ca1f5c950f624f343248245720613d.jpg", 
+      "id": 17 
+    }, 
+    { 
+      "name": "ID Chain Necklace", 
+      "brand": "Tiffani", 
+      "price": "150", 
+      "details": "18K PVD Gold Plated Stainless Steel Base Chain Length: 16'' Lobster Clasp Closure Hypoallergenic Tarnish Resistant Includes soft cloth for cleaning after use Delivered in a custom Dos Nueve Studio jewelry box", 
+      "image": "https://cdn.shopify.com/s/files/1/0529/0518/1374/products/IMG_3116_720x.jpg?v=1620161227", 
+      "id": 18 
+    }, 
+    { 
+      "name": "Ball And Chain Bracelet", 
+      "brand": "Boucheron", 
+      "price": 220, 
+      "details": "Handcrafted gold plated chain bracelet or silver The adjustable size looks great on any wrist Lightweight, but durable & anti-tarnish Measures: 6.5\"-8\" adjustable", 
+      "image": "https://i.pinimg.com/564x/19/ab/59/19ab5956ba3cc926cb809b9fd199276e.jpg", 
+      "id": 19 
+    }, 
+    { 
+      "name": "The Rainbow Ring", 
+      "brand": "Swarovski", 
+      "price": 80, 
+      "details": "4K Gold Fill", 
+      "image": "https://cdn.shopify.com/s/files/1/1734/4153/products/4T1A7371_1_1400x1400.jpg?v=1599757855", 
+      "id": 20 
+    }, 
+    { 
+      "name": "Good As Gold Earrings", 
+      "brand": "Cartier", 
+      "price": 100, 
+      "details": "14K gold plated hanging earrings", 
+      "image": "https://i.pinimg.com/564x/5b/08/09/5b08099b6b0177aa58c46e1a6c859a7b.jpg", 
+      "id": 21 
+    }, 
+    { 
+      "name": "V-Necklace - Vida", 
+      "brand": "DAMIANI", 
+      "price": 100, 
+      "details": " 14K Gold  Components  Cubic Zirconia, 14K Gold on Recycled Sterling Silver  Length  380mm - 15\", 50mm - 2\"", 
+      "image": "https://cdn.shopify.com/s/files/1/2579/7674/products/AnaLuisaJewelryNecklacesPendantNecklacesV-NecklaceVidaSterlingSilver.jpg?v=1633974584", 
+      "id": 22 
+    }, 
+    { 
+      "name": " Link Dainty Chain Bracelet", 
+      "brand": "Bucelatti", 
+      "price": 280, 
+      "details": "Gold Filled, Sterling Silver", 
+      "image": "https://i.pinimg.com/564x/c0/55/b6/c055b64fc0bb0aca8d66db7e2e7f9815.jpg", 
+      "id": 23 
+    }, 
+    { 
+      "name": " THIN CURB CHAIN NECKLACE", 
+      "brand": "an Cleef Arpels", 
+      "price": 320, 
+      "details": "925k sterling silver, 14k gold filled,  Rose Gold", 
+      "image": "https://cdn.shopify.com/s/files/1/0063/0036/8999/products/WhatsApp_Image_2020-02-05_at_20.10.07_1000x1000.jpg?v=1585078767", 
+      "id": 24 
+    }, 
+    { 
+      "name": " Yuri Necklace", 
+      "brand": "Tiffani  Co", 
+      "price": 130, 
+      "details": "Materials: 18k gold plated sterling silver, cubic zirconia stone Measurements: 15.5“/394 in length, plus 1.5\"/38mm extension chain, charm 0.8\"/20mm in length, 0.2\"/5mm in width", 
+      "image":
 
-      "brand": "Cartier"
-    },
-    {
-      "name": "Simple Silver Necklace",
-      "brand": "BULGARI",
-      "price": "380",
-      "details": "Handmade product Materials: Silver Adjustable length Style: Minimalist",
-      "image": "https://i.pinimg.com/564x/14/ce/52/14ce5271156b9bab5a45a00e6d102177.jpg",
-      "id": 16
-    },
-    {
-      "name": "Gold Chunky Hoop Earrings",
-      "brand": "Chopard",
-      "price": "40",
-      "details": "18K PVD Gold Plated Stainless Steel Base Hinged Top Closure Hoop Width: 2.9 cm Hypoallergenic Tarnish Resistant Includes soft cloth for cleaning after use Delivered in a custom Dos Nueve Studio jewelry box ",
-      "image": "https://i.pinimg.com/564x/73/ca/1f/73ca1f5c950f624f343248245720613d.jpg",
-      "id": 17
-    },
-    {
-      "name": "ID Chain Necklace",
-      "brand": "Tiffani  Co",
-      "price": "150",
-      "details": "18K PVD Gold Plated Stainless Steel Base Chain Length: 16'' Lobster Clasp Closure Hypoallergenic Tarnish Resistant Includes soft cloth for cleaning after use Delivered in a custom Dos Nueve Studio jewelry box",
-      "image": "https://cdn.shopify.com/s/files/1/0529/0518/1374/products/IMG_3116_720x.jpg?v=1620161227",
-      "id": 18
-    },
-    {
-      "name": "Ball And Chain Bracelet",
-      "brand": "Boucheron",
-      "price": 220,
-      "details": "Handcrafted gold plated chain bracelet or silver The adjustable size looks great on any wrist Lightweight, but durable & anti-tarnish Measures: 6.5\"-8\" adjustable",
-      "image": "https://i.pinimg.com/564x/19/ab/59/19ab5956ba3cc926cb809b9fd199276e.jpg",
-      "id": 19
-    },
-    {
-      "name": "The Rainbow Ring",
-      "brand": "Swarovski",
-      "price": 80,
-      "details": "4K Gold Fill",
-      "image": "https://cdn.shopify.com/s/files/1/1734/4153/products/4T1A7371_1_1400x1400.jpg?v=1599757855",
-      "id": 20
-    }
-  ]
+"https://cdn.shopify.com/s/files/1/1782/4093/products/tyganecklace_900x.jpg?v=1630586935", 
+      "id": 25 
+    }, 
+    { 
+      "name": "tiniest initial necklace", 
+      "brand": "GUCCI", 
+      "price": 195, 
+      "details": "Our best selling layering necklace. A sweet and subtle way to honor yourself, your lover, your best friend, your baby, or your fur baby.", 
+      "image": "https://cdn.shopify.com/s/files/1/0358/5309/products/IMG_0558.jpg?v=1616092643", 
+      "id": 26 
+    } 
+  ] 
 }
