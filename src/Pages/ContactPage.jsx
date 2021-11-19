@@ -1,13 +1,4 @@
-// import React from 'react';
 
-// const ContactPage = () => {
-//     return (
-//         <div>
-//             <h3>About us </h3>
-// //
-// //         </div>
-//     );
-// };
 import * as React from 'react';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -63,5 +54,3 @@ export default function BasicTable() {
     );
 }
 
-
-// export default ContactPage;

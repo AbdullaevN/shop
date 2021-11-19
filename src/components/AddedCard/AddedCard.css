@@ -12,7 +12,6 @@
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  /* background: linear-gradient(to right, rgba(254,255,232,1) 0%,rgba(214,219,191,1) 100%); */
 }
 
 .inp {
